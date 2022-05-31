@@ -1,3 +1,57 @@
-<h1>
-    hello world!
-</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>환경 뉴스 관리 대시보드</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript">
+
+        Date.prototype.toDateInputValue = (function () {
+            var local = new Date(this);
+            console.log(local)
+            local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+            return local.toJSON().slice(0, 10);
+        });
+
+        function onClick(event) {
+            console.log("click event invoked!!", event)
+        }
+
+        async function getNewsData() {
+            if (!confirm("클릭 한 번 한 번이 다 돈이다...")) return;
+            let date = document.getElementById('datePicker').value;
+            document.getElementById('newsTable').innerHTML = "<p> fuck you world! </p>";
+            fetch("https://04vapzzfa1.execute-api.ap-northeast-2.amazonaws.com/default/crawl-env-news").then((res)=>{
+                return res.json()
+            }).then((data)=>{
+                console.log(data)
+            })
+        }
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>환경 뉴스 관리 대시보드</h1>
+    </header>
+    <div id="content">
+        <div class="setDate">
+            <h2>날짜 선택</h2>
+            <input type="date" id="datePicker">
+            <button type="button" onClick="getNewsData()">뉴스 조회</button>
+        </div>
+        <div class="newsTable" id="newsTable">
+
+        </div>
+    </div>
+    <footer>
+        &copy; 주식회사 나누스<br>
+        All rights reserved
+    </footer>
+    <script type="text/javascript">
+        document.getElementById('datePicker').value = new Date().toDateInputValue();
+    </script>
+</body>
+
+</html>

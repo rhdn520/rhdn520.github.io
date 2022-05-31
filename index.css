@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100vh;
+    height: 100vh;
+    background-color: #333333;
+    color: #efefef;
+}
+
+header{
+    height: 65px;
+}
+
+#content{
+    min-height: calc(100% - 130px);
+    height: auto;
+}
+
+footer{
+    height: 65px;
+}
