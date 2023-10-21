@@ -7,6 +7,11 @@ let fieldWidth;
 let fieldHeight;
 let mosquito_img;
 let mosquito_sound;
+let handclap_sound_1;
+let handclap_sound_2;
+let handclap_sound_3;
+let handclap_sound_4;
+let handclap_sound_5;
 let handclap_sounds = [];
 
 //variables for ingame logic
@@ -29,11 +34,11 @@ let deadMosquitos = [];
 
 function preload() {
   mosquito_sound = loadSound('assets/mosquito.mp3');
-  let handclap_sound_1 = loadSound('assets/hand_clap_1.mp3');
-  let handclap_sound_2 = loadSound('assets/hand_clap_2.mp3');
-  let handclap_sound_3 = loadSound('assets/hand_clap_3.mp3');
-  let handclap_sound_4 = loadSound('assets/hand_clap_4.mp3');
-  let handclap_sound_5 = loadSound('assets/hand_clap_5.mp3');
+  handclap_sound_1 = loadSound('assets/hand_clap_1.mp3');
+  handclap_sound_2 = loadSound('assets/hand_clap_2.mp3');
+  handclap_sound_3 = loadSound('assets/hand_clap_3.mp3');
+  handclap_sound_4 = loadSound('assets/hand_clap_4.mp3');
+  handclap_sound_5 = loadSound('assets/hand_clap_5.mp3');
   handclap_sounds.push(handclap_sound_1);
   handclap_sounds.push(handclap_sound_2);
   handclap_sounds.push(handclap_sound_3);
@@ -102,9 +107,9 @@ function draw() {
       text(`게임 설명`, width / 2, height / 2 - 140);
       textSize(20);
       text(`제한시간 안에 모기를 최대한 많이 잡으세요!
-      사냥을 시도하려면 모기 위에 마우스를 올리고 클릭하세요.
-      날아다니는 모기 위에 마우스를 오래 올려둘수록 사냥 성공 확률이 높아집니다.
-      확률에 따라 사냥 성공 여부가 결정됩니다.
+      사냥을 시도하려면 모기를 마우스로 클릭하세요.
+      클릭 이전, 모기 위에 마우스를 오래 올려둘수록 사냥 성공 확률이 높아집니다.
+      확률에 따라 사냥의 성공 여부가 결정됩니다.
       사냥을 시도하면 쌓아둔 성공 확률도 초기화돼요.
       확신이 들 때까지 기다리는 참을성을 길러보세요.
       그럼 화이팅~!`,
@@ -147,7 +152,9 @@ function draw() {
       textSize(25);
       text('나가시겠습니까?', width / 2, height / 2 - 50);
 
+      exitConfirm_isMouseOverYesButton(mouseX, mouseY) ? fill('#919191') : fill('#000');
       rect(width / 2, height / 2, 100, 50);
+      exitConfirm_isMouseOverNoButton(mouseX, mouseY) ? fill('#919191') : fill('#000');
       rect(width / 2, height / 2 + 60, 100, 50);
 
       fill('#fff');
@@ -403,16 +410,12 @@ function resetgameVariables() {
 }
 
 function timer() {
-  /* this math takes the current second
-  and subtracts our very first second (when the timer started)
-  from it in order to keep track of time*/
-
   let time = 60 - int((millis() - startTime) / 1000);
   if (time < 0) {
     time = "END!!"
   }
 
-  return time; //stop running this function once the timer reaches 30
+  return time;
 }
 
 //button clicked 
@@ -428,16 +431,22 @@ function game_isExitButtonPressed(mouseX, mouseY) {
   return false;
 }
 
+function exitConfirm_isMouseOverYesButton(mouseX, mouseY) {
+  return (mouseX > width / 2 - 50) && (mouseX < width / 2 + 50) && (mouseY > height / 2 - 25) && (mouseY < height / 2 + 25);
+}
 function exitConfirm_isYesButtonPressed(mouseX, mouseY) {
-  if ((mouseX > width / 2 - 50) && (mouseX < width / 2 + 50) && (mouseY > height / 2 - 25) && (mouseY < height / 2 + 25)) {
+  if (exitConfirm_isMouseOverYesButton(mouseX, mouseY)) {
     console.log('Yes Button Pressed!');
     return true;
   }
   return false;
 }
 
+function exitConfirm_isMouseOverNoButton(mouseX, mouseY) {
+  return (mouseX > width / 2 - 50) && (mouseX < width / 2 + 50) && (mouseY > height / 2 + 60 - 25) && (mouseY < height / 2 + 60 + 25);
+}
 function exitConfirm_isNoButtonPressed(mouseX, mouseY) {
-  if ((mouseX > width / 2 - 50) && (mouseX < width / 2 + 50) && (mouseY > height / 2 + 60 - 25) && (mouseY < height / 2 + 60 + 25)) {
+  if (exitConfirm_isMouseOverNoButton(mouseX, mouseY)) {
     console.log('No Button Pressed!');
     return true;
   }
@@ -513,7 +522,6 @@ function result_isExitbuttonPressed(mouseX, mouseY) {
 function help_isMouseOverExitButton(mouseX, mouseY) {
   return (mouseX > width / 2 - 50) && (mouseX < width / 2 + 50) && (mouseY > height / 2 + 140 - 25) && (mouseY < height / 2 + 140 + 25);
 }
-
 function help_isExitbuttonPressed(mouseX, mouseY) {
   if (help_isMouseOverExitButton(mouseX, mouseY)) {
     console.log('exit button pressed!');
