@@ -407,7 +407,7 @@ function timer() {
   and subtracts our very first second (when the timer started)
   from it in order to keep track of time*/
 
-  let time = 30 - int((millis() - startTime) / 1000);
+  let time = 60 - int((millis() - startTime) / 1000);
   if (time < 0) {
     time = "END!!"
   }
