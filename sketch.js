@@ -309,7 +309,7 @@ function mouseClicked() {
       }
       break;
     case 'game':
-      handclap_sounds[int(random(0, 6))].play();
+      handclap_sounds[int(random(0, 5))].play();
 
       if (game_isExitButtonPressed(mouseX, mouseY)) {
         console.log('hello');
