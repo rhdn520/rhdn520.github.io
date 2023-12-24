@@ -131,7 +131,7 @@ class Receipt {
 
     //Img : Icon
     let receiptIcon = createElement("img");
-    receiptIcon.attribute("src", "../assets/receiptIcon.png");
+    receiptIcon.attribute("src", "assets/receiptIcon.png");
     receiptIcon.addClass("receipt-icon");
     profileBottom.child(receiptIcon);
 
