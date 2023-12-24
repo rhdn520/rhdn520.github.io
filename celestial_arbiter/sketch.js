@@ -18,6 +18,7 @@ let pretendardFont;
 let templeBGM;
 
 let globalVar = {
+  gptAPIKey: '',
   chatLog: [
     {
       role: "assistant",
@@ -93,7 +94,7 @@ function setup() {
   ptcl.updateParticles(0, true);
   ui.loadUI(scene);
 
-  // templeBGM.loop();
+  templeBGM.loop();
 }
 
 function draw() {
