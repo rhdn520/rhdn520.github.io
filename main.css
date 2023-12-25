@@ -64,7 +64,7 @@ section h1{
 section p{
     margin:0;
     width: 100%;
-    /* max-width: 500px; */
+    max-width: 500px;
     padding: 0px 0px 20px;
     text-align: center;
 }
