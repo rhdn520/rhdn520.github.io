@@ -70,7 +70,7 @@ section p{
 }
 
 section ul{
-    /* width: 500px; */
+    width: 500px;
     margin:0;
     padding:0;
     display: flex;
