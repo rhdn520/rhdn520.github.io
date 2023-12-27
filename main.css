@@ -25,6 +25,9 @@ body{
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
+    box-sizing: border-box;
+    margin:0;
+    padding:0 10px;
 }
 
 header{
