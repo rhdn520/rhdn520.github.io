@@ -88,6 +88,7 @@ section p{
     max-width: 500px;
     padding: 0px 0px 20px;
     text-align: center;
+    word-break: keep-all;
 }
 
 section ul{
