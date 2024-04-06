@@ -1,4 +1,39 @@
-#body{
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunLo';
+    src: url('assets/ChosunLo.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunBg';
+    src: url('assets/ChosunBg.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ChosunKm';
+    src: url('assets/ChosunKm.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+
+body{
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -6,15 +41,34 @@
     width: 100%;
 }
 
-header{
-    width: 100%;
+.flex-row{
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
     align-items: center;
 }
 
+.flex-column{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+
+header{
+    width: 100%;
+    display: flex;
+    margin:0;
+    padding: 15px 10px;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #323232;
+}
+
+
 .logo{
+    margin:0;
+    padding:0;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -22,16 +76,77 @@ header{
 }
 
 .logo span{
-    
+    margin:0;
+    padding:0;
+    line-height: 1;
+    font-family: "ChosunLo";
+    font-size: 2rem;
 }
 
 article{
-
-
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    padding: 0px 24px;
 }
+
+.article-title{
+    width: 100%;
+    height: fit-content;
+    padding: 15px 0px;
+}
+
+.article-title h1{
+    font-family: 'ChosunBg';
+    line-height: 1.7;
+}
+
+.article-content{
+    align-items: flex-start;
+}
+
+.article-content h3{
+    margin: 20px 0px 10px;
+    font-family: 'ChosunKm';
+    line-height: 1.7;
+}
+
+.article-content p{
+    margin: 7px 0px;
+    font-family: "Chosunilbo_myungjo";
+    line-height: 2;
+    text-align: justify;
+}
+
+.article-image-container{
+    width: 100%;
+    margin: 30px 0px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-image-container img{
+    width: 100%;
+    max-width: 400px;
+}
+
+.article-image-container span{
+    margin-top: 10px;
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 13px;
+    color: #323232
+}
+
 
 footer{
     display: flex;
+    margin:0;
+    padding: 50px 0px;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
