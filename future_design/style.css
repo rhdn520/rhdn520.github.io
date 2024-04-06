@@ -26,6 +26,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'ChosunSg';
+    src: url('assets/ChosunSg.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     box-sizing: border-box;
     margin:0;
@@ -39,6 +46,7 @@ body{
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    background-color: #f2f2f2;
 }
 
 .flex-row{
@@ -57,12 +65,14 @@ body{
 header{
     width: 100%;
     display: flex;
+    /* position:sticky; */
     margin:0;
     padding: 15px 10px;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #323232;
+    /* background-color: #dbdbdb; */
 }
 
 
@@ -90,13 +100,29 @@ article{
     align-items: center;
     width: 100%;
     max-width: 700px;
-    padding: 0px 24px;
+    padding: 0px 24px 50px;
 }
 
 .article-title{
     width: 100%;
     height: fit-content;
-    padding: 15px 0px;
+    padding: 30px 0px;
+    border-bottom: 1px solid #323232;  
+}
+
+.article-date{
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:5px;
+}
+
+.article-date span{
+    font-family: "ChosunSg";
+    font-size: 14px;
 }
 
 .article-title h1{
@@ -115,6 +141,7 @@ article{
 }
 
 .article-content p{
+    width: 100%;;
     margin: 7px 0px;
     font-family: "Chosunilbo_myungjo";
     line-height: 2;
@@ -144,10 +171,14 @@ article{
 
 
 footer{
+    width: 100%;
+    /* height: 300px; */
     display: flex;
     margin:0;
-    padding: 50px 0px;
+    padding: 100px 0px;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    border-top: 1px solid #323232;
+    /* background-color: #dbdbdb; */
 }
