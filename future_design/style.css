@@ -33,6 +33,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'ChosunKg';
+    src: url('assets/ChosunKg.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     box-sizing: border-box;
     margin:0;
@@ -126,7 +133,7 @@ article{
 }
 
 .article-title h1{
-    font-family: 'ChosunBg';
+    font-family: 'ChosunKg';
     line-height: 1.7;
 }
 
