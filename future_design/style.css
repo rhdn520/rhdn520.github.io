@@ -117,6 +117,13 @@ article{
     border-bottom: 1px solid #323232;  
 }
 
+.article-title h1{
+    font-family: 'ChosunKg';
+    font-size: 1.7rem;
+    line-height: 1.7;
+}
+
+
 .article-date{
     width: 100%;
     margin-top: 15px;
@@ -132,10 +139,6 @@ article{
     font-size: 14px;
 }
 
-.article-title h1{
-    font-family: 'ChosunKg';
-    line-height: 1.7;
-}
 
 .article-content{
     align-items: flex-start;
@@ -144,6 +147,7 @@ article{
 .article-content h3{
     margin: 20px 0px 10px;
     font-family: 'ChosunKm';
+    font-size: 1.2rem;
     line-height: 1.7;
 }
 
@@ -151,6 +155,7 @@ article{
     width: 100%;;
     margin: 7px 0px;
     font-family: "Chosunilbo_myungjo";
+    font-size: 1.05rem;
     line-height: 2;
     text-align: justify;
 }
@@ -172,20 +177,56 @@ article{
 .article-image-container span{
     margin-top: 10px;
     font-family: 'Chosunilbo_myungjo';
-    font-size: 13px;
+    font-size: 1rem;
     color: #323232
 }
 
 
 footer{
     width: 100%;
-    /* height: 300px; */
+    height: 300px;
     display: flex;
     margin:0;
-    padding: 100px 0px;
-    flex-flow: column nowrap;
+    padding: 50px 0px;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     border-top: 1px solid #323232;
     /* background-color: #dbdbdb; */
+}
+
+.footer-left{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-right{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer-section{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.footer-section-title{
+
+}
+
+.footer-subsection{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
