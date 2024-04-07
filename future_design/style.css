@@ -148,6 +148,7 @@ button{
     height:auto;
     width: auto;
     border:none;
+    background-color: inherit;
 }
 
 button:hover{
@@ -285,9 +286,9 @@ footer span{
     align-items: center;
 }
 
-.footer-section-title{
+/* .footer-section-title{
 
-}
+} */
 
 .footer-subsection{
     display: flex;
