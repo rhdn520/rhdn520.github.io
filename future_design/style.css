@@ -69,6 +69,66 @@ body{
 }
 
 
+.sidebar {
+    width: 250px;
+    padding: 15px 15px 0px 20px;
+    position: fixed;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    left: -250px;
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid #323232;
+    background-color: #f4f4f4;
+    transition: left 0.3s ease;
+}
+
+.sidebar-button-container{
+    /* padding: 15px;   */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+/* 메뉴바 활성화 시 */
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar-menu{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sidebar-section{
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sidebar-section-title{
+    font-family: 'ChosunKg';
+    font-size: 1.2rem;
+    margin-bottom: 10px 0px 5px;
+}
+
+.sidebar-section-btn{
+    margin: 7px 10px 0px;
+    font-family: 'ChosunSg';
+    font-size: 1.1rem;
+}
+
+
 header{
     width: 100%;
     display: flex;
@@ -82,6 +142,14 @@ header{
     /* background-color: #dbdbdb; */
 }
 
+button{
+    margin:0;
+    padding:0;
+    height:auto;
+    width: auto;
+    border:none;
+}
+
 
 .logo{
     margin:0;
@@ -90,6 +158,11 @@ header{
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+}
+
+.logo a{
+    text-decoration: none;
+    color: #000;
 }
 
 .logo span{
@@ -188,30 +261,18 @@ footer{
     display: flex;
     margin:0;
     padding: 50px 0px;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     border-top: 1px solid #323232;
     /* background-color: #dbdbdb; */
 }
 
-.footer-left{
-    height: 100%;
-    width: 30%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+footer span{
+    margin-top: 30px;
+    font-family: 'ChosunSg';
 }
 
-.footer-right{
-    width: 70%;
-    height: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: flex-start;
-}
 
 .footer-section{
     display: flex;
