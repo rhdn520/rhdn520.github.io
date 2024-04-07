@@ -254,7 +254,7 @@ article{
 .article-image-container span{
     margin-top: 10px;
     font-family: 'Chosunilbo_myungjo';
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #323232
 }
 
@@ -273,7 +273,7 @@ footer{
 }
 
 footer span{
-    margin-top: 30px;
+    /* margin-top: 30px; */
     font-family: 'ChosunSg';
 }
 
