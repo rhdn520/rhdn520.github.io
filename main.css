@@ -44,22 +44,33 @@ header{
     align-items: center;
     border-bottom: 1px solid black;
 }
+.intro-text-profile{
+    display: flex;
+    margin: 15px 0px;
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.intro-text-profile p{
+    text-align: left;
+    margin:0;
+    width: fit-content;
+}
 
 .profile-image-container{
-    display: flex;
-    margin: 20px 0px;
-    width: 90%;
-    max-width: 500px;
-    height: fit-content;
+    width: 150px;
+    position: relative;
+    overflow: hidden;
     border-radius: 50%;
-    /* background-image: url('assets/profile_image2.jpeg'); */
-    background-size: contain;
+    aspect-ratio: 1/1;
 }
 .profile-image-container img{
-    position: relative;
-    display: flex;;
+    /* position: relative; */
     width: 100%;
-    height: auto;
+    margin-top: -10px;
+    /* display: flex; */
 }
 
 section{
