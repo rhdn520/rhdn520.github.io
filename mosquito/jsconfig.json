@@ -1,10 +1,3 @@
-{
-  "compilerOptions": {
-    "target": "es6"
-  },
-  "include": [
-    "*.js",
-    "**/*.js",
-    "/Users/choeseung-u/.vscode/extensions/samplavigne.p5-vscode-1.2.14/p5types/global.d.ts"
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f28e781398b6b3f421295bd3e8d528d7daeb1b90b13b37036b38ced471be943a
+size 190
