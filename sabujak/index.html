@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fbeee6;
+      font-family: system-ui, sans-serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #game-container {
+      margin-top: 20px;
+      width: 1920px;
+      height: 1080px;
+      background: #000;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="game-container"></div>
+
+  <!-- 🔥 p5 + 게임 스크립트는 body 끝에 와야 함 -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+
+
+  <script src="main.js"></script>
+  <script src="start.js"></script>
+  <script src="intro.js"></script>
+  <script src="tutorial.js"></script>
+  <script src="sketch_map.js"></script>
+  <script src="dialogue_minigame.js"></script>
+  <script src="sketch_hula.js"></script>
+  <script src="minigameB.js"></script>
+  <script src="ending_return.js"></script>
+  <script src="ongho.js"></script>
+  <script src="ending.js"></script>
+
+</body>
+</html>
