@@ -2,6 +2,11 @@
 // main.js – 게임 전체 상태 관리 + BGM + 동적 캔버스 크기 (안정화 통합본)
 // ===============================================
 
+function callIfFunction(name, ...args) {
+  const fn = globalThis?.[name];
+  if (typeof fn === "function") return fn(...args);
+}
+
 // 전역 게임 상태
 let gameState = "title";
 let minigameA_cleared = false;
@@ -40,15 +45,15 @@ let isBGMFading = false;
 // ===============================================
 function preload() {
 
-  if (typeof preload_start === "function") preload_start();
-  if (typeof preload_intro === "function") preload_intro();
-  if (typeof preload_tutorial === "function") preload_tutorial();
-  if (typeof preload_map === "function") preload_map();
-  if (typeof preload_dialogue === "function") preload_dialogue();
-  if (typeof preload_minigameA === "function") preload_minigameA();
-  if (typeof preload_minigameB === "function") preload_minigameB();
-  if (typeof preload_ongho === "function") preload_ongho();
-  if (typeof preload_ending === "function") preload_ending();
+  callIfFunction("preload_start");
+  callIfFunction("preload_intro");
+  callIfFunction("preload_tutorial");
+  callIfFunction("preload_map");
+  callIfFunction("preload_dialogue");
+  callIfFunction("preload_minigameA");
+  callIfFunction("preload_minigameB");
+  callIfFunction("preload_ongho");
+  callIfFunction("preload_ending");
 
   // BGM
   // NOTE: Browsers block XHR-based loads (sound/font) on `file://`.
@@ -87,8 +92,8 @@ function setup() {
   const canvas = createCanvas(canvasW, canvasH);
   canvas.parent("game-container");
 
-  if (!inited.start && typeof setup_start === "function") {
-    setup_start();
+  if (!inited.start) {
+    callIfFunction("setup_start");
     inited.start = true;
   }
 }
@@ -112,48 +117,48 @@ function draw() {
 
   // 씬별 setup (1회)
   if (gameState === "intro" && !inited.intro) {
-    setup_intro?.(); inited.intro = true;
+    callIfFunction("setup_intro"); inited.intro = true;
   }
   if (gameState === "tutorial" && !inited.tutorial) {
-    setup_tutorial?.(); inited.tutorial = true;
+    callIfFunction("setup_tutorial"); inited.tutorial = true;
   }
   if (gameState === "map" && !inited.map) {
-    setup_map?.(); inited.map = true;
+    callIfFunction("setup_map"); inited.map = true;
   }
   if (gameState === "minigameA" && !inited.minigameA) {
-    setup_minigameA?.(); inited.minigameA = true;
+    callIfFunction("setup_minigameA"); inited.minigameA = true;
   }
   if (gameState === "minigameB" && !inited.minigameB) {
-    setup_minigameB?.(); inited.minigameB = true;
+    callIfFunction("setup_minigameB"); inited.minigameB = true;
   }
   if (gameState === "ongho" && !inited.ongho) {
-    setup_ongho?.(); inited.ongho = true;
+    callIfFunction("setup_ongho"); inited.ongho = true;
   }
   if (gameState === "ending" && !inited.ending) {
-    setup_ending?.(); inited.ending = true;
+    callIfFunction("setup_ending"); inited.ending = true;
   }
 
   // DRAW 분기
   switch (gameState) {
     case "title":
-    case "notice": draw_start?.(); break;
-    case "intro": draw_intro?.(); break;
-    case "tutorial": draw_tutorial?.(); break;
+    case "notice": callIfFunction("draw_start"); break;
+    case "intro": callIfFunction("draw_intro"); break;
+    case "tutorial": callIfFunction("draw_tutorial"); break;
     case "map":
-      draw_map?.();
+      callIfFunction("draw_map");
       checkAllMinigamesCleared();
       break;
 
-    case "minigameA_story": draw_minigameA_story(); break;
-    case "minigameA": draw_minigameA(); break;
-    case "minigameA_end": draw_minigameA_end(); break;
+    case "minigameA_story": callIfFunction("draw_minigameA_story"); break;
+    case "minigameA": callIfFunction("draw_minigameA"); break;
+    case "minigameA_end": callIfFunction("draw_minigameA_end"); break;
 
-    case "minigameB_story": draw_minigameB_story(); break;
-    case "minigameB": draw_minigameB(); break;
-    case "minigameB_end": draw_minigameB_end(); break;
+    case "minigameB_story": callIfFunction("draw_minigameB_story"); break;
+    case "minigameB": callIfFunction("draw_minigameB"); break;
+    case "minigameB_end": callIfFunction("draw_minigameB_end"); break;
 
-    case "ongho": draw_ongho(); break;
-    case "ending": draw_ending(); break;
+    case "ongho": callIfFunction("draw_ongho"); break;
+    case "ending": callIfFunction("draw_ending"); break;
   }
 }
 
@@ -168,18 +173,18 @@ function mousePressed() {
     gameState === "minigameB_story" ||
     gameState === "minigameB_end"
   ) {
-    mousePressed_dialogue?.();
+    callIfFunction("mousePressed_dialogue");
     return;
   }
 
-  if (gameState === "title" || gameState === "notice") mousePressed_start?.();
-  else if (gameState === "intro") mousePressed_intro?.();
-  else if (gameState === "tutorial") mousePressed_tutorial?.();
-  else if (gameState === "map") mousePressed_map?.();
-  else if (gameState === "minigameA") mousePressed_minigameA?.();
-  else if (gameState === "minigameB") mousePressed_minigameB?.();
-  else if (gameState === "ongho") mousePressed_ongho?.();
-  else if (gameState === "ending") mousePressed_ending?.();
+  if (gameState === "title" || gameState === "notice") callIfFunction("mousePressed_start");
+  else if (gameState === "intro") callIfFunction("mousePressed_intro");
+  else if (gameState === "tutorial") callIfFunction("mousePressed_tutorial");
+  else if (gameState === "map") callIfFunction("mousePressed_map");
+  else if (gameState === "minigameA") callIfFunction("mousePressed_minigameA");
+  else if (gameState === "minigameB") callIfFunction("mousePressed_minigameB");
+  else if (gameState === "ongho") callIfFunction("mousePressed_ongho");
+  else if (gameState === "ending") callIfFunction("mousePressed_ending");
 }
 
 // ===============================================
@@ -187,17 +192,17 @@ function mousePressed() {
 // ===============================================
 function keyPressed() {
 
-  keyPressed_returnEvent?.();
+  callIfFunction("keyPressed_returnEvent");
 
-  if (gameState === "tutorial") return keyPressed_tutorial?.();
-  if (gameState === "map") keyPressed_map?.();
+  if (gameState === "tutorial") return callIfFunction("keyPressed_tutorial");
+  if (gameState === "map") callIfFunction("keyPressed_map");
 
-  if (gameState === "minigameA_story") return keyPressed_minigameA_story();
-  if (gameState === "minigameA_end") return keyPressed_minigameA_end();
-  if (gameState === "minigameB_story") return keyPressed_minigameB_story();
-  if (gameState === "minigameB_end") return keyPressed_minigameB_end();
-  if (gameState === "minigameA") return keyPressed_minigameA();
-  if (gameState === "minigameB") return keyPressed_minigameB();
+  if (gameState === "minigameA_story") return callIfFunction("keyPressed_minigameA_story");
+  if (gameState === "minigameA_end") return callIfFunction("keyPressed_minigameA_end");
+  if (gameState === "minigameB_story") return callIfFunction("keyPressed_minigameB_story");
+  if (gameState === "minigameB_end") return callIfFunction("keyPressed_minigameB_end");
+  if (gameState === "minigameA") return callIfFunction("keyPressed_minigameA");
+  if (gameState === "minigameB") return callIfFunction("keyPressed_minigameB");
 
   // 엔딩 복귀 대사 ENTER
   if (gameState === "map" && returnEvent?.active && returnEvent.step === 0 && keyCode === ENTER) {
