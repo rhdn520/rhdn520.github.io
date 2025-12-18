@@ -16,7 +16,12 @@ let visitArea  = { x: 990, y: 710, w: 300, h: 80 };
 function preload_ending() {
   endingVideo = createVideo("assets/outro_video.mp4");
   endingVideo.hide();
+  // Autoplay policy friendliness
   endingVideo.volume(0);
+  endingVideo.elt.muted = true;
+  endingVideo.elt.setAttribute("playsinline", "");
+  endingVideo.elt.playsInline = true;
+  endingVideo.elt.addEventListener("error", (e) => console.error("[endingVideo] element error", e));
   endingVideo.size(1920, 1080);
 
   // 엔딩 페이지 이미지 로드
@@ -30,7 +35,8 @@ function setup_ending() {
     videoEnded = true;
   });
 
-  endingVideo.play();
+  const p = endingVideo.play();
+  if (p && typeof p.catch === "function") p.catch((e) => console.error("[endingVideo] play() failed", e));
 }
 
 function draw_ending() {

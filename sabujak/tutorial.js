@@ -72,7 +72,7 @@ let clickedDiary2 = false;
 function preload_tutorial() {
   bgRoom = loadImage("assets/bg_room.png");
   playerImg = loadImage("assets/player.png");
-  customFont = loadFont("assets/DungGeunMo.ttf");
+  if (location.protocol !== "file:") customFont = loadFont("assets/DungGeunMo.ttf");
 
   magnifierCursor = loadImage("assets/cursor_magnifier.png");
   speechBubbleImg = loadImage("assets/speechbubble_yellow1.png");
@@ -310,7 +310,7 @@ function drawDoorDialogue() {
   image(speechBubbleImg, bx, by, bubbleW, bubbleH);
 
   fill(0);
-  textFont(customFont);
+  if (customFont) textFont(customFont);
   textSize(28);
   textLeading(40);
   textAlign(LEFT, TOP);
@@ -332,7 +332,7 @@ function drawObjectDialogue() {
   image(speechBubbleImg, bx, by, bubbleW, bubbleH);
 
   fill(0);
-  textFont(customFont);
+  if (customFont) textFont(customFont);
   textSize(28);
   textLeading(40);
   textAlign(LEFT, TOP);
@@ -350,7 +350,7 @@ function drawCodeInputUI() {
   rect(0, 0, width, height);
 
   fill(255);
-  textFont(customFont);
+  if (customFont) textFont(customFont);
   textSize(40);
   textAlign(CENTER, CENTER);
   text("문 비밀번호를 입력하세요.", width/2, height/2 - 120);

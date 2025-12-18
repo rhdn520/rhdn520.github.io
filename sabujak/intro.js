@@ -13,6 +13,12 @@ let introFinished = false;
 function preload_intro() {
   introVideo = createVideo("assets/intro_video.mp4");
   introVideo.hide(); // 처음에는 숨김
+  // Autoplay policy friendliness
+  introVideo.volume(0);
+  introVideo.elt.muted = true;
+  introVideo.elt.setAttribute("playsinline", "");
+  introVideo.elt.playsInline = true;
+  introVideo.elt.addEventListener("error", (e) => console.error("[introVideo] element error", e));
 }
 
 // ---------------------------
@@ -27,7 +33,8 @@ function setup_intro() {
     fadingOut = true; // 페이드아웃 시작
   });
 
-  introVideo.play();
+  const p = introVideo.play();
+  if (p && typeof p.catch === "function") p.catch((e) => console.error("[introVideo] play() failed", e));
 }
 
 // ---------------------------

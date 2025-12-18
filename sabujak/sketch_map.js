@@ -54,7 +54,7 @@ function preload_map() {
   bubbleBlueImg = loadImage("assets/speechbubble_blue.png");
   bubbleOrangeImg = loadImage("assets/speechbubble_orange.png");
 
-  dungFont = loadFont("assets/DungGeunMo.ttf");
+  if (location.protocol !== "file:") dungFont = loadFont("assets/DungGeunMo.ttf");
 }
 
 
@@ -62,7 +62,7 @@ function preload_map() {
 // SETUP
 // ============================
 function setup_map() {
-  textFont(dungFont);
+  if (dungFont) textFont(dungFont);
   imageMode(CENTER);
   playBGM("bgm1");
 
@@ -431,4 +431,3 @@ function drawBusyDialogue() {
   textSize(35);
   text(busyDialogue.text, bx + 35, by + 105);
 }
-

@@ -51,10 +51,33 @@ function preload() {
   if (typeof preload_ending === "function") preload_ending();
 
   // BGM
-  bgm1 = loadSound("assets/bgm2.mp3");      // map / 기본
-  bgm2 = loadSound("assets/bgm1.mp3");      // ongho
-  bgm3 = loadSound("assets/hoola.mp3");     // minigameA
-  bgm4 = loadSound("assets/minigameB.mp3"); // minigameB
+  // NOTE: Browsers block XHR-based loads (sound/font) on `file://`.
+  // Run via a local server (recommended), or the game will start without BGM.
+  const canLoadViaXHR = typeof location !== "undefined" && location.protocol !== "file:";
+  const safeLoadSound = (path) => {
+    if (!canLoadViaXHR) return null;
+    return loadSound(
+      path,
+      undefined,
+      (err) => {
+        if (err && typeof Event !== "undefined" && err instanceof Event) {
+          const t = err.target;
+          console.error(
+            `[BGM] Failed to load: ${path}`,
+            `Event(${err.type})`,
+            t?.currentSrc || t?.src || ""
+          );
+        } else {
+          console.error(`[BGM] Failed to load: ${path}`, err);
+        }
+      }
+    );
+  };
+
+  bgm1 = safeLoadSound("assets/bgm2.mp3");  // map / 기본
+  bgm2 = safeLoadSound("assets/bgm1.mp3");  // ongho
+  bgm3 = safeLoadSound("assets/hoola.mp3"); // minigameA
+  bgm4 = safeLoadSound("minigameB.mp3") || safeLoadSound("assets/minigameB.mp3"); // minigameB
 }
 
 // ===============================================

@@ -125,7 +125,7 @@ function preload_minigameA() {
   hula_npcBlueImg   = loadImage("assets/npc2.png");
   hula_npcOrangeImg = loadImage("assets/player.png");
 
-  hula_font = loadFont("assets/DungGeunMo.ttf");
+  if (location.protocol !== "file:") hula_font = loadFont("assets/DungGeunMo.ttf");
 }
 
 

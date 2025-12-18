@@ -62,7 +62,7 @@ function preload_minigameB() {
     loadImage("assets/flower.png")
   ];
 
-  minigameB_font = loadFont("assets/DungGeunMo.ttf");
+  if (location.protocol !== "file:") minigameB_font = loadFont("assets/DungGeunMo.ttf");
 
   minigameB_speechBg = loadImage("assets/background_speech.png");
 }
@@ -73,7 +73,7 @@ function preload_minigameB() {
 // =======================================
 function setup_minigameB() {
   imageMode(CENTER);
-  textFont(minigameB_font);
+  if (minigameB_font) textFont(minigameB_font);
   playBGM("bgm4");
 
   minigameB_player = new MinigameB_Player();

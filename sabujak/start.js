@@ -39,7 +39,7 @@ let phaseStartTime = 0;
 function preload_start() {
   startBgImg = loadImage("assets/start_background.png");
   helpPopupImg = loadImage("assets/help_popup.png");
-  customFont = loadFont("assets/DungGeunMo.ttf");
+  if (location.protocol !== "file:") customFont = loadFont("assets/DungGeunMo.ttf");
   cursorHoverImg = loadImage("assets/cursor_highlight.png");
 }
 
@@ -48,7 +48,7 @@ function preload_start() {
 // setup
 // ===========================
 function setup_start() {
-  textFont(customFont);
+  if (customFont) textFont(customFont);
   cursor(ARROW);
   playBGM("bgm1");
 }
