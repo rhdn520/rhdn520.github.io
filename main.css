@@ -13,9 +13,80 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/notosanskr/v39/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuozeLQ.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/notosanskr/v39/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzmoyeLQ.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/notosanskr/v39/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzrQyeLQ.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/notosanskr/v39/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLQ.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/notosanskr/v39/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzztgyeLQ.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/notosanskr/v39/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzjQ1eLQ.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/notosanskr/v39/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzg01eLQ.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/notosanskr/v39/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzmo1eLQ.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('https://fonts.gstatic.com/s/notosanskr/v39/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzkM1eLQ.ttf') format('truetype');
+}
 
 *{
-    font-family: 'Orbit-Regular';
+    font-family: 'Noto Sans KR', sans-serif;
     box-sizing: border-box;
 }
 
@@ -38,11 +109,45 @@ header{
     font-weight:bold;
     text-align: center;
     margin: 0;
-    padding: 40px 0px 50px;
+    padding: 54px 0px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid black;
+    position: relative;
+}
+
+.language-toggle{
+    position: absolute;
+    top: 12px;
+    right: 0;
+    display: flex;
+    border: 1px solid black;
+    background: white;
+}
+
+.language-tab{
+    font-family: 'Noto Sans KR', 'Orbit-Regular', sans-serif;
+    font-size: 0.8rem;
+    border: 0;
+    background: white;
+    color: black;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.language-tab + .language-tab{
+    border-left: 1px solid black;
+}
+
+.language-tab.is-active{
+    background: black;
+    color: white;
+}
+
+.language-tab:focus-visible{
+    outline: 2px solid black;
+    outline-offset: 2px;
 }
 .intro-text-profile{
     display: flex;
@@ -73,6 +178,7 @@ header{
     /* display: flex; */
 }
 
+
 section{
     display: flex;
     flex-flow: column nowrap;
@@ -96,7 +202,7 @@ section h2{
 section p{
     margin:0;
     width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     padding: 0px 0px 20px;
     text-align: center;
     word-break: keep-all;
@@ -106,6 +212,7 @@ section ul{
     width: 100%;
     max-width: 700px;
     margin:0;
+    margin-bottom: 10px;
     padding:0;
     display: flex;
     flex-flow: column nowrap;
@@ -125,6 +232,11 @@ section ul li ul{
 #introduction ul{
     align-items: center;
     width: auto;
+
+}
+
+.bold-font{
+    font-weight: 700;
 }
 
 

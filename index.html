@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
   <meta charset="utf-8" />
@@ -10,38 +10,40 @@
 
 <body>
   <header>
-    <span>존재하는 승우의<br>존재하는 웹사이트
-    </span>
+    <div class="language-toggle" aria-label="Language">
+      <button type="button" class="language-tab" data-lang-button="en" aria-pressed="false">EN</button>
+      <button type="button" class="language-tab is-active" data-lang-button="ko" aria-pressed="true">KO</button>
+    </div>
+    <span data-i18n="siteTitle">존재하는 승우의<br>존재하는 웹사이트</span>
   </header>
   <section id="introduction">
-    <h2>이 웹사이트는...</h2>
+    <h2 data-i18n="introHeading">이 웹사이트는...</h2>
     <div class="intro-text-profile">
       <div class="profile-image-container">
-        <img src="assets/profile.jpeg">
+        <img src="assets/profile.jpeg" alt="최승우 프로필 사진" data-i18n-alt="profileImageAlt">
       </div>
-      <p>안녕하세요. 반갑습니다. 제 이름은 최승우라고 합니다.<br>이 웹사이트는 제가 해온 일들을 기록하기 위한 공간입니다.<br>저에 대해 좀 더 알고싶으시다면 아래 링크를 참조해주세요.<br>그럼,
+      <p data-i18n="introBody">안녕하세요. 반갑습니다. 제 이름은 최승우라고 합니다.<br>이 웹사이트는 제가 해온 일들을 기록하기 위한 공간입니다.<br>저에 대해 좀 더 알고싶으시다면 아래 링크를 참조해주세요.<br>그럼,
         당신의
         하루에 행운이 깃들기를!</p>
     </div>
     <br>
-    <span>&downarrow; Social &downarrow;</span>
+    <span data-i18n="socialHeading" class="bold-font">&downarrow; Social &downarrow;</span>
     <ul>
-      <li>블로그| <a href="https://noseandtongue.tistory.com/" target="_blank">https://noseandtongue.tistory.com</a></li>
-      <li>인스타그램| <a href="https://www.instagram.com/yrotciv4/" target="_blank">https://www.instagram.com/yrotciv4/</a>
-      </li>
-      <li>깃허브| <a href="https://github.com/rhdn520" target="_blank">https://github.com/rhdn520</a></li>
+      <li data-i18n="blogLink">블로그| <a href="https://noseandtongue.tistory.com/" target="_blank">https://noseandtongue.tistory.com</a></li>
+      <li data-i18n="instagramLink">인스타그램| <a href="https://www.instagram.com/yrotciv4/" target="_blank">https://www.instagram.com/yrotciv4/</a></li>
+      <li data-i18n="githubLink">깃허브| <a href="https://github.com/rhdn520" target="_blank">https://github.com/rhdn520</a></li>
     </ul>
     <br>
-    <span>&downarrow; 저는요... &downarrow;</span>
+    <span data-i18n="aboutHeading" class="bold-font">&downarrow; 저는요... &downarrow;</span>
     <ul>
-      <li>(2018~2025) 서울대학교 경제학부 </li>
-      <li>(2018~2019) 디자인문구 스타트업 론리익스피리멘터 (매니저)</li>
-      <li>(2019~2022) 미디어스타트업 나누스(대표)</li>
-      <li>(2023~2025) 서울대학교 연합전공 정보문화학 </li>
-      <li>(2025~) 서울대학교 데이터사이언스대학원 석사과정 </li>
+      <li data-i18n="aboutEconomics">(2018~2025) 서울대학교 경제학부</li>
+      <li data-i18n="aboutLonelyExperimenter">(2018~2019) 디자인문구 스타트업 론리익스피리멘터 (매니저)</li>
+      <li data-i18n="aboutNanus">(2019~2022) 미디어스타트업 나누스(대표)</li>
+      <li data-i18n="aboutInformationCulture">(2023~2025) 서울대학교 연합전공 정보문화학</li>
+      <li data-i18n="aboutDataScience">(2025~) 서울대학교 데이터사이언스대학원 석사과정</li>
     </ul>
     <br>
-    <span>&downarrow; 바로가기 &downarrow;</span>
+    <span data-i18n="shortcutHeading" class="bold-font">&downarrow; 바로가기 &downarrow;</span>
     <a href="#academic-projects"># Academic Projects</a>
     <a href="#business-projects"># Business Projects</a>
     <a href="#web-projects"># Web Projects</a>
@@ -51,35 +53,35 @@
     <h2>Academic Projects</h2>
     <ul>
       <li>
-        복학생들의 살아남기: 사회적 시간표와 휴ㆍ복학의 문화적 의미 (2025)
+        <span data-i18n="returningStudentsTitle">복학생들의 살아남기: 사회적 시간표와 휴ㆍ복학의 문화적 의미 (2025)</span>
         <ul>
-          <li>Authors: <strong>최승우</strong>, 김유솔, 김효주, 홍승욱, 지명금, 김선기</li>
-          <li>Accepted: 교육문화연구</li>
-          <li>링크: <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003290838">https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003290838</a></li>
+          <li data-i18n="returningStudentsAuthors">Authors: <strong>최승우</strong>, 김유솔, 김효주, 홍승욱, 지명금, 김선기</li>
+          <li data-i18n="returningStudentsAccepted">Accepted: 교육문화연구</li>
+          <li data-i18n="returningStudentsLink">링크: <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003290838">https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003290838</a></li>
         </ul>
       </li>
       <li>
         BridG MT: Enhancing LLMs' Machine Translation Capabilities with Sentence Bridging and Gradual MT (2025)
         <ul>
-          <li>Authors: <strong>Seung-Woo Choi</strong>, Ga-hyun Yoo, Jay-Yoon Lee</li>
-          <li>Accepted: ACL Findings 2025</li>
-          <li>링크: <a href="https://arxiv.org/abs/2410.11693">https://arxiv.org/abs/2410.11693</a></li>
+          <li>Authors: <strong>Seungwoo Choi</strong>, Gahyun Yoo, Jay-Yoon Lee</li>
+          <li>Accepted: Findings of the Association of Computational Linguistics (ACL), 2025</li>
+          <li data-i18n="bridgLink">링크: <a href="https://arxiv.org/abs/2410.11693">https://arxiv.org/abs/2410.11693</a></li>
         </ul>
       </li>
       <li>
-        음악저작권 사용료율 산정을 위한 정량적 방법론의 도입 가능성 검토 (2024)
+        <span data-i18n="musicCopyrightTitle">음악저작권 사용료율 산정을 위한 정량적 방법론의 도입 가능성 검토 (2024)</span>
         <ul>
-          <li>Authors: 최승우, 김재연, 이혜진</li>
-          <li>Accepted: 제2회 한국음악저작권협회 논문공모전 장려상</li>
-          <li>링크: <a href="https://www.komca.or.kr/CTLJSP">https://www.komca.or.kr/CTLJSP</a></li>
+          <li data-i18n="musicCopyrightAuthors">Authors: 최승우, 김재연, 이혜진</li>
+          <li data-i18n="musicCopyrightAccepted">Accepted: 제2회 한국음악저작권협회 논문공모전 장려상</li>
+          <li data-i18n="musicCopyrightLink">링크: <a href="https://www.komca.or.kr/CTLJSP">https://www.komca.or.kr/CTLJSP</a></li>
         </ul>
-       </li>
+      </li>
       <li>
         Enhancing Robustness of Retrieval-Augmented Language Models with In-Context Learning (2024)
         <ul>
-          <li>Authors: SeongIl Park, <strong>Seungwoo Choi</strong>, Nahyun Kim, Jay-Yoon Lee</li>
-          <li>Accepted: ACL 2024 KnowledgeNLP Workshop</li>
-          <li>링크: <a href="https://aclanthology.org/2024.knowledgenlp-1.7/">https://aclanthology.org/2024.knowledgenlp-1.7/</a></li>
+          <li>Authors: SeongIl Park, <strong>Seungwoo Choi</strong>, Nahyun Kim, Jay-yoon Lee</li>
+          <li>Accepted: Proceedings of the 3rd Workshop on Knowledge Augmented Methods for NLP</li>
+          <li data-i18n="ragLink">링크: <a href="https://aclanthology.org/2024.knowledgenlp-1.7/">https://aclanthology.org/2024.knowledgenlp-1.7/</a></li>
         </ul>
       </li>
     </ul>
@@ -88,57 +90,61 @@
     <h2>Business Projects</h2>
     <ul>
       <li>
-        NANUS(나누스) (2021~2022)
+        <span data-i18n="nanusTitle">NANUS(나누스) (2021~2022)</span>
         <ul>
-          <li>설명: 제가 창업하고 운영한 스타트업입니다.
+          <li data-i18n="nanusDescription">설명: 제가 창업하고 운영한 스타트업입니다.
             아이템은 논픽션 텍스트 미디어 유통에 특화된 온라인 플랫폼이었으며, 저는 대표로서 필요한 각종 세무 및 법무, 기획과 프론트 개발, NLP를 위한 ML 작업 일부를 담당하였습니다.
             2021 교육부 주관 학생창업유망팀 300팀에 선정되었으며, 2022년 한국언론진흥재단 미디어스타트업에 선정되었습니다.</li>
-          <li>관련 링크:
+          <li>
+            <span data-i18n="relatedLinksLabel">관련 링크:</span>
             <ul>
               <li>
-                아이템 간략 소개:
+                <span data-i18n="nanusItemBriefLabel">아이템 간략 소개:</span>
                 <a href="https://yrotciv.notion.site/Quilted-c40bb94d9a8447238be6c20fe517d47d?pvs=4"
                   target="_blank">https://yrotciv.notion.site/Quilted-c40bb94d9a8447238be6c20fe517d47d?pvs=4</a>
               </li>
               <li>
-                언론진흥재단 미디어 스타트업 목록 :
+                <span data-i18n="mediaStartupListLabel">언론진흥재단 미디어 스타트업 목록 :</span>
                 <a href="https://www.bigkinds.or.kr/media/getMediaStartupList.do"
                   target="_blank">https://www.bigkinds.or.kr/media/getMediaStartupList.do</a>
               </li>
               <li>
-                미디어스타트업 선정사 중앙일보 인터뷰:
+                <span data-i18n="joongangInterviewLabel">미디어스타트업 선정사 중앙일보 인터뷰:</span>
                 <a href="https://www.joongang.co.kr/article/25123777#home"
                   target="_blank">https://www.joongang.co.kr/article/25123777</a>
               </li>
               <li>
-                서울대학교 창업지원단 입주사 인터뷰:
+                <span data-i18n="snuInterviewLabel">서울대학교 창업지원단 입주사 인터뷰:</span>
                 <a href="https://www.youtube.com/watch?v=hls5454J4cQ"
                   target="_blank">https://www.youtube.com/watch?v=hls5454J4cQ</a>
               </li>
             </ul>
+          </li>
         </ul>
       </li>
       <li>
-        DOSOONG2 (2024)
+        <span data-i18n="dosoongTitle">DOSOONG2 (2024)</span>
         <ul>
-          <li>설명: 시각장애인의 미술작품 감상을 돕기 위한 AI 도슨트 & 사운드 생성 서비스 "도숭이"의 기획안입니다. 활용될 수 있는 AI 기술들을 탐색하고, 서비스를 설계하는 역할을 담당했습니다.
+          <li data-i18n="dosoongDescription">설명: 시각장애인의 미술작품 감상을 돕기 위한 AI 도슨트 &amp; 사운드 생성 서비스 "도숭이"의 기획안입니다. 활용될 수 있는 AI 기술들을 탐색하고, 서비스를 설계하는 역할을 담당했습니다.
           </li>
-          <li>작업 링크: <a href="https://dosoong2.imweb.me/" target="_blank">https://dosoong2.imweb.me/</a></li>
+          <li data-i18n="dosoongWorkLink">작업 링크: <a href="https://dosoong2.imweb.me/" target="_blank">https://dosoong2.imweb.me/</a></li>
           <li>Prompt Engineering for Prototype: <a
               href="https://colab.research.google.com/drive/14bl4Fl01Aa3017J89ee433OwATpIbBwU?usp=drive_link"
               target="_blank">https://colab.research.google.com/drive/14bl4Fl01Aa3017J89ee433OwATpIbBwU?usp=drive_link</a>
           </li>
         </ul>
+      </li>
+    </ul>
   </section>
   <section id="web-projects">
     <h2>Web Projects</h2>
     <ul>
       <li>
-        교통사고 사망 통계 분석 시스템 (2024)
+        <span data-i18n="trafficStatsTitle">교통사고 사망 통계 분석 시스템 (2024)</span>
         <ul>
-          <li>설명: TAAS의 API를 통해 제공받은 교통사고 사망자 관련 데이터를 시각화하기 위한 프로젝트입니다. 기존 TAAS 시스템의 단점을 보완하고, 3D뷰 및 모듈형 필터를 통해 편리한 UI를
+          <li data-i18n="trafficStatsDescription">설명: TAAS의 API를 통해 제공받은 교통사고 사망자 관련 데이터를 시각화하기 위한 프로젝트입니다. 기존 TAAS 시스템의 단점을 보완하고, 3D뷰 및 모듈형 필터를 통해 편리한 UI를
             구축했습니다.</li>
-          <li>링크(언젠가 사라질 수 있음+버그많음): <a href="https://euphonious-valkyrie-58ac5f.netlify.app/"
+          <li data-i18n="trafficStatsLink">링크(언젠가 사라질 수 있음+버그많음): <a href="https://euphonious-valkyrie-58ac5f.netlify.app/"
               target="_blank">https://euphonious-valkyrie-58ac5f.netlify.app/</a></li>
           <li>Screenshots for Link Expiration: <a
               href="https://yrotciv.notion.site/Visualization-Project-Screenshots-81cd57fabc124aa0a8dca8229c287a80?pvs=4"
@@ -147,24 +153,24 @@
         </ul>
       </li>
       <li>
-        모임타임 (2024)
+        <span data-i18n="moimtimeTitle">모임타임 (2023)</span>
         <ul>
-          <li>설명: 여러 명이서 약속 시간을 정할 때 유용하게 사용할 수 있는 웹사이트입니다. 모임을 생성하고 공유하면, 참여자들이 자신이 가능한 시간을 체크할 수 있습니다. 사이트는 각자 체크한 결과를
+          <li data-i18n="moimtimeDescription">설명: 여러 명이서 약속 시간을 정할 때 유용하게 사용할 수 있는 웹사이트입니다. 모임을 생성하고 공유하면, 참여자들이 자신이 가능한 시간을 체크할 수 있습니다. 사이트는 각자 체크한 결과를
             수합해 가능한 시간대를 시간표 형태로 보여줍니다.
           </li>
-          <li>사용된 기술: Angular, Firebase</li>
-          <li>작업 링크: <a href="https://moimtime.com" target="_blank">https://moimtime.com</a> </li>
+          <li data-i18n="moimtimeTech">사용된 기술: Angular, Firebase</li>
+          <li data-i18n="moimtimeWorkLink">작업 링크: <a href="https://moimtime.com" target="_blank">https://moimtime.com</a></li>
         </ul>
       </li>
       <li>
-        CELESTIAL ARBITER : 인생 영수증 (2023)
+        <span data-i18n="celestialTitle">CELESTIAL ARBITER : 인생 영수증 (2023)</span>
         <ul>
-          <li>설명: GPT4를 활용한 미디어 아트입니다. 기획 및 프롬프트 엔지니어링, UI 구현 등에 참여했습니다. PC에 실제 영수증 프린터기를 연결하시면 보다 효과적인 체험을 하실 수 있습니다.
+          <li data-i18n="celestialDescription">설명: GPT4를 활용한 미디어 아트입니다. 기획 및 프롬프트 엔지니어링, UI 구현 등에 참여했습니다. PC에 실제 영수증 프린터기를 연결하시면 보다 효과적인 체험을 하실 수 있습니다.
           </li>
-          <li>사용된 기술: js, p5.js, 프롬프트 엔지니어링</li>
-          <li>작업 링크: <a href="https://rhdn520.github.io/celestial_arbiter/"
-              target="_blank">https://rhdn520.github.io/celestial_arbiter</a> </li>
-          <li>상세정보: <a
+          <li data-i18n="celestialTech">사용된 기술: js, p5.js, 프롬프트 엔지니어링</li>
+          <li data-i18n="celestialWorkLink">작업 링크: <a href="https://rhdn520.github.io/celestial_arbiter/"
+              target="_blank">https://rhdn520.github.io/celestial_arbiter</a></li>
+          <li data-i18n="celestialDetails">상세정보: <a
               href="https://www.ischive.com/assignment/6D11SI1HPZ">https://www.ischive.com/assignment/6D11SI1HPZ</a>
           </li>
         </ul>
@@ -175,29 +181,29 @@
     <h2>Game Projects</h2>
     <ul>
       <li>
-        현상해부학 (2024)
+        <span data-i18n="phenomenonTitle">현상해부학 (2024)</span>
         <ul>
-          <li>설명: Twine을 활용해 만든 텍스트 기반 게임입니다. 한 개인의 죽음과 무관하게 작동하는 세계의 일상성을 묘사합니다.</li>
-          <li>사용된 기술: Twinery</li>
-          <li>링크: <a href="https://yrotciv.itch.io/phenomenon-anatomy"
-              target="_blank">https://yrotciv.itch.io/phenomenon-anatomy</a> </li>
+          <li data-i18n="phenomenonDescription">설명: Twine을 활용해 만든 텍스트 기반 게임입니다. 한 개인의 죽음과 무관하게 작동하는 세계의 일상성을 묘사합니다.</li>
+          <li data-i18n="phenomenonTech">사용된 기술: Twinery</li>
+          <li data-i18n="phenomenonLink">링크: <a href="https://yrotciv.itch.io/phenomenon-anatomy"
+              target="_blank">https://yrotciv.itch.io/phenomenon-anatomy</a></li>
         </ul>
       </li>
       <li>
         YOU GOT BALLS! (2023)
         <ul>
-          <li>설명: Unity 3d를 활용해 만든 간단한 공굴리기 게임입니다.</li>
-          <li>사용된 기술: Unity 3d</li>
-          <li>링크: <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.YouGotBalls"
-              target="_blank">https://play.google.com/store/apps/details?id=com.DefaultCompany.YouGotBalls</a> </li>
+          <li data-i18n="youGotBallsDescription">설명: Unity 3d를 활용해 만든 간단한 공굴리기 게임입니다.</li>
+          <li data-i18n="youGotBallsTech">사용된 기술: Unity 3d</li>
+          <li data-i18n="youGotBallsLink">링크: <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.YouGotBalls"
+              target="_blank">https://play.google.com/store/apps/details?id=com.DefaultCompany.YouGotBalls</a></li>
         </ul>
       </li>
       <li>
-        모스끼또! (2023)
+        <span data-i18n="mosquitoTitle">모스끼또! (2023)</span>
         <ul>
-          <li>설명: p5.js를 활용해 만든 모기 잡기 게임입니다.</li>
-          <li>사용된 기술: p5.js</li>
-          <li>링크: <a href="https://rhdn520.github.io/mosquito/" target="_blank">https://rhdn520.github.io/mosquito</a>
+          <li data-i18n="mosquitoDescription">설명: p5.js를 활용해 만든 모기 잡기 게임입니다.</li>
+          <li data-i18n="mosquitoTech">사용된 기술: p5.js</li>
+          <li data-i18n="mosquitoLink">링크: <a href="https://rhdn520.github.io/mosquito/" target="_blank">https://rhdn520.github.io/mosquito</a>
           </li>
         </ul>
       </li>
@@ -206,14 +212,205 @@
   <section id="scholarship">
     <h2>Scholarships</h2>
     <ul>
-      <li>(재)일운과학기술재단 (2025~ )</li>
-      <li>(재)관악회 (2018~2024)</li>
-      <li>(재)용운장학재단 (2017)</li>
+      <li data-i18n="scholarshipIlwoon">(재)일운과학기술재단 (2025~ )</li>
+      <li data-i18n="scholarshipGwanak">(재)관악회 (2018~2024)</li>
+      <li data-i18n="scholarshipYongwoon">(재)용운장학재단 (2017)</li>
     </ul>
   </section>
   <footer>
     <span>&copy; 2023 CHOI,Seungwoo All rights reserved</span>
   </footer>
+  <script>
+    const translations = {
+      ko: {
+        documentTitle: "존재하는 승우의 존재하는 웹사이트",
+        profileImageAlt: "최승우 프로필 사진",
+        siteTitle: "존재하는 승우의<br>존재하는 웹사이트",
+        introHeading: "이 웹사이트는...",
+        introBody: "안녕하세요. 반갑습니다. 제 이름은 최승우라고 합니다.<br>이 웹사이트는 제가 해온 일들을 기록하기 위한 공간입니다.<br>저에 대해 좀 더 알고싶으시다면 아래 링크를 참조해주세요.<br>그럼, 당신의 하루에 행운이 깃들기를!",
+        socialHeading: "&downarrow; Social &downarrow;",
+        blogLink: '블로그| <a href="https://noseandtongue.tistory.com/" target="_blank">https://noseandtongue.tistory.com</a>',
+        instagramLink: '인스타그램| <a href="https://www.instagram.com/yrotciv4/" target="_blank">https://www.instagram.com/yrotciv4/</a>',
+        githubLink: '깃허브| <a href="https://github.com/rhdn520" target="_blank">https://github.com/rhdn520</a>',
+        aboutHeading: "&downarrow; 저는요... &downarrow;",
+        aboutEconomics: "(2018~2025) 서울대학교 경제학부",
+        aboutLonelyExperimenter: "(2018~2019) 디자인문구 스타트업 론리익스피리멘터 (매니저)",
+        aboutNanus: "(2019~2022) 미디어스타트업 나누스(대표)",
+        aboutInformationCulture: "(2023~2025) 서울대학교 연합전공 정보문화학",
+        aboutDataScience: "(2025~) 서울대학교 데이터사이언스대학원 석사과정",
+        shortcutHeading: "&downarrow; 바로가기 &downarrow;",
+        returningStudentsTitle: "복학생들의 살아남기: 사회적 시간표와 휴ㆍ복학의 문화적 의미 (2025)",
+        returningStudentsAuthors: "Authors: <strong>최승우</strong>, 김유솔, 김효주, 홍승욱, 지명금, 김선기",
+        returningStudentsAccepted: "Accepted: 교육문화연구",
+        returningStudentsLink: '링크: <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003290838">https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003290838</a>',
+        bridgLink: '링크: <a href="https://arxiv.org/abs/2410.11693">https://arxiv.org/abs/2410.11693</a>',
+        musicCopyrightTitle: "음악저작권 사용료율 산정을 위한 정량적 방법론의 도입 가능성 검토 (2024)",
+        musicCopyrightAuthors: "Authors: 최승우, 김재연, 이혜진",
+        musicCopyrightAccepted: "Accepted: 제2회 한국음악저작권협회 논문공모전 장려상",
+        musicCopyrightLink: '링크: <a href="https://www.komca.or.kr/CTLJSP">https://www.komca.or.kr/CTLJSP</a>',
+        ragLink: '링크: <a href="https://aclanthology.org/2024.knowledgenlp-1.7/">https://aclanthology.org/2024.knowledgenlp-1.7/</a>',
+        nanusTitle: "NANUS(나누스) (2021~2022)",
+        nanusDescription: "설명: 제가 창업하고 운영한 스타트업입니다. 아이템은 논픽션 텍스트 미디어 유통에 특화된 온라인 플랫폼이었으며, 저는 대표로서 필요한 각종 세무 및 법무, 기획과 프론트 개발, NLP를 위한 ML 작업 일부를 담당하였습니다. 2021 교육부 주관 학생창업유망팀 300팀에 선정되었으며, 2022년 한국언론진흥재단 미디어스타트업에 선정되었습니다.",
+        relatedLinksLabel: "관련 링크:",
+        nanusItemBriefLabel: "아이템 간략 소개:",
+        mediaStartupListLabel: "언론진흥재단 미디어 스타트업 목록 :",
+        joongangInterviewLabel: "미디어스타트업 선정사 중앙일보 인터뷰:",
+        snuInterviewLabel: "서울대학교 창업지원단 입주사 인터뷰:",
+        dosoongDescription: '설명: 시각장애인의 미술작품 감상을 돕기 위한 AI 도슨트 &amp; 사운드 생성 서비스 "도숭이"의 기획안입니다. 활용될 수 있는 AI 기술들을 탐색하고, 서비스를 설계하는 역할을 담당했습니다.',
+        dosoongWorkLink: '작업 링크: <a href="https://dosoong2.imweb.me/" target="_blank">https://dosoong2.imweb.me/</a>',
+        trafficStatsTitle: "교통사고 사망 통계 분석 시스템 (2024)",
+        trafficStatsDescription: "설명: TAAS의 API를 통해 제공받은 교통사고 사망자 관련 데이터를 시각화하기 위한 프로젝트입니다. 기존 TAAS 시스템의 단점을 보완하고, 3D뷰 및 모듈형 필터를 통해 편리한 UI를 구축했습니다.",
+        trafficStatsLink: '링크(언젠가 사라질 수 있음+버그많음): <a href="https://euphonious-valkyrie-58ac5f.netlify.app/" target="_blank">https://euphonious-valkyrie-58ac5f.netlify.app/</a>',
+        dosoongTitle: "DOSOONG2 (2024)",
+        moimtimeTitle: "모임타임 (2023)",
+        moimtimeDescription: "설명: 여러 명이서 약속 시간을 정할 때 유용하게 사용할 수 있는 웹사이트입니다. 모임을 생성하고 공유하면, 참여자들이 자신이 가능한 시간을 체크할 수 있습니다. 사이트는 각자 체크한 결과를 수합해 가능한 시간대를 시간표 형태로 보여줍니다.",
+        moimtimeTech: "사용된 기술: Angular, Firebase",
+        moimtimeWorkLink: '작업 링크: <a href="https://moimtime.com" target="_blank">https://moimtime.com</a>',
+        celestialTitle: "CELESTIAL ARBITER : 인생 영수증 (2023)",
+        celestialDescription: "설명: GPT4를 활용한 미디어 아트입니다. 기획 및 프롬프트 엔지니어링, UI 구현 등에 참여했습니다. PC에 실제 영수증 프린터기를 연결하시면 보다 효과적인 체험을 하실 수 있습니다.",
+        celestialTech: "사용된 기술: js, p5.js, 프롬프트 엔지니어링",
+        celestialWorkLink: '작업 링크: <a href="https://rhdn520.github.io/celestial_arbiter/" target="_blank">https://rhdn520.github.io/celestial_arbiter</a>',
+        celestialDetails: '상세정보: <a href="https://www.ischive.com/assignment/6D11SI1HPZ">https://www.ischive.com/assignment/6D11SI1HPZ</a>',
+        phenomenonTitle: "현상해부학 (2024)",
+        phenomenonDescription: "설명: Twine을 활용해 만든 텍스트 기반 게임입니다. 한 개인의 죽음과 무관하게 작동하는 세계의 일상성을 묘사합니다.",
+        phenomenonTech: "사용된 기술: Twinery",
+        phenomenonLink: '링크: <a href="https://yrotciv.itch.io/phenomenon-anatomy" target="_blank">https://yrotciv.itch.io/phenomenon-anatomy</a>',
+        youGotBallsDescription: "설명: Unity 3d를 활용해 만든 간단한 공굴리기 게임입니다.",
+        youGotBallsTech: "사용된 기술: Unity 3d",
+        youGotBallsLink: '링크: <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.YouGotBalls" target="_blank">https://play.google.com/store/apps/details?id=com.DefaultCompany.YouGotBalls</a>',
+        mosquitoTitle: "모스끼또! (2023)",
+        mosquitoDescription: "설명: p5.js를 활용해 만든 모기 잡기 게임입니다.",
+        mosquitoTech: "사용된 기술: p5.js",
+        mosquitoLink: '링크: <a href="https://rhdn520.github.io/mosquito/" target="_blank">https://rhdn520.github.io/mosquito</a>',
+        scholarshipIlwoon: "(재)일운과학기술재단 (2025~ )",
+        scholarshipGwanak: "(재)관악회 (2018~2024)",
+        scholarshipYongwoon: "(재)용운장학재단 (2017)"
+      },
+      en: {
+        documentTitle: "Seungwoo's Existing Website",
+        profileImageAlt: "Profile photo of Seungwoo Choi",
+        siteTitle: "Seungwoo's Existing<br>Website",
+        introHeading: "This website is...",
+        introBody: "Hello, nice to meet you. My name is Seungwoo Choi.<br>This website is a place where I keep records of the work I have done.<br>If you would like to know more about me, please see the links below.<br>Then, may luck be with your day!",
+        socialHeading: "&downarrow; Social &downarrow;",
+        blogLink: 'Blog| <a href="https://noseandtongue.tistory.com/" target="_blank">https://noseandtongue.tistory.com</a>',
+        instagramLink: 'Instagram| <a href="https://www.instagram.com/yrotciv4/" target="_blank">https://www.instagram.com/yrotciv4/</a>',
+        githubLink: 'GitHub| <a href="https://github.com/rhdn520" target="_blank">https://github.com/rhdn520</a>',
+        aboutHeading: "&downarrow; About me... &downarrow;",
+        aboutEconomics: "(Feb 2018-Aug 2025) B.A. in Economics, Seoul National University",
+        aboutLonelyExperimenter: "(2018~2019) Lonely Experimenter, a design stationery startup (Manager)",
+        aboutNanus: "(Apr 2021-Jan 2023) NANUS Inc., Founder & CEO",
+        aboutInformationCulture: "(2023-Aug 2025) Interdisciplinary Program in Information Science & Culture, Seoul National University",
+        aboutDataScience: "(Sep 2025-Present) M.S. in Data Science, Graduate School of Data Science, Seoul National University",
+        shortcutHeading: "&downarrow; Shortcuts &downarrow;",
+        returningStudentsTitle: "Surviving as a Returning Student: Social Timetables and the Cultural Meanings of Leave and Re-entry (2025)",
+        returningStudentsAuthors: "Authors: <strong>Seungwoo Choi</strong>, Yusol Kim, Hyoju Kim, SeungWook Hong, Myounggeum Jee, Sungi Kim",
+        returningStudentsAccepted: "Accepted: Journal of Education & Culture",
+        returningStudentsLink: 'Link: <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003290838">https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003290838</a>',
+        bridgLink: 'Link: <a href="https://arxiv.org/abs/2410.11693">https://arxiv.org/abs/2410.11693</a>',
+        musicCopyrightTitle: "Review of the Introduction of a Quantitative Methodology for Setting Music Copyright Royalty Rates (2024)",
+        musicCopyrightAuthors: "Authors: <strong>Seungwoo Choi</strong>, Jaeyeon Kim, Hyejin Lee",
+        musicCopyrightAccepted: "Accepted: 2nd Korea Music Copyright Association Paper Contest",
+        musicCopyrightLink: 'Link: <a href="https://www.komca.or.kr/CTLJSP">https://www.komca.or.kr/CTLJSP</a>',
+        ragLink: 'Link: <a href="https://aclanthology.org/2024.knowledgenlp-1.7/">https://aclanthology.org/2024.knowledgenlp-1.7/</a>',
+        nanusTitle: "NANUS Inc. (Apr 2021-Jan 2023)",
+        nanusDescription: "Description: A startup I founded and operated. The item was an online platform specialized for distributing nonfiction text-based media. As Founder & CEO, I handled tax and legal administration, planning, frontend development, and part of the ML work for NLP. NANUS was selected for the Ministry of Education's 2021 Student Entrepreneurship Team 300 and for the Korea Press Foundation's 2022 Media Startup program.",
+        relatedLinksLabel: "Related links:",
+        nanusItemBriefLabel: "Brief item introduction:",
+        mediaStartupListLabel: "Korea Press Foundation media startup list:",
+        joongangInterviewLabel: "JoongAng Ilbo interview with selected media startups:",
+        snuInterviewLabel: "SNU Startup Support Foundation resident company interview:",
+        dosoongTitle: "DOSOONG2: AI Docent for the Visually Impaired (2024)",
+        dosoongDescription: "Description: A proposal for DOSOONG2, an AI docent and sound-generation service concept for visually impaired users. I explored applicable AI technologies and designed a service for experiencing visual art through AI-generated descriptions and sound.",
+        dosoongWorkLink: 'Work link: <a href="https://dosoong2.imweb.me/" target="_blank">https://dosoong2.imweb.me/</a>',
+        trafficStatsTitle: "Traffic Accident Fatality Statistics Analysis System (2024)",
+        trafficStatsDescription: "Description: A project for visualizing traffic accident fatality data provided through the TAAS API. It complements limitations of the existing TAAS system and builds a convenient UI with a 3D view and modular filters.",
+        trafficStatsLink: 'Link (may disappear someday + has many bugs): <a href="https://euphonious-valkyrie-58ac5f.netlify.app/" target="_blank">https://euphonious-valkyrie-58ac5f.netlify.app/</a>',
+        moimtimeTitle: "Moimtime (2023)",
+        moimtimeDescription: "Description: A scheduling web application for group meetings. After creating and sharing a meeting, participants can check the times they are available. The site collects the responses and displays available time slots as a timetable.",
+        moimtimeTech: "Technologies used: Angular, Firebase",
+        moimtimeWorkLink: 'Work link: <a href="https://moimtime.com" target="_blank">https://moimtime.com</a>',
+        celestialTitle: "CELESTIAL ARBITER : Life Receipt (2023)",
+        celestialDescription: "Description: A media art project using GPT-4. I participated in planning, prompt engineering, and UI implementation. You can have a more effective experience by connecting an actual receipt printer to your PC.",
+        celestialTech: "Technologies used: js, p5.js, prompt engineering",
+        celestialWorkLink: 'Work link: <a href="https://rhdn520.github.io/celestial_arbiter/" target="_blank">https://rhdn520.github.io/celestial_arbiter</a>',
+        celestialDetails: 'Details: <a href="https://www.ischive.com/assignment/6D11SI1HPZ">https://www.ischive.com/assignment/6D11SI1HPZ</a>',
+        phenomenonTitle: "Phenomenon Anatomy (2024)",
+        phenomenonDescription: "Description: A text-based game made with Twine. It portrays the everydayness of a world that continues to operate regardless of an individual's death.",
+        phenomenonTech: "Technologies used: Twinery",
+        phenomenonLink: 'Link: <a href="https://yrotciv.itch.io/phenomenon-anatomy" target="_blank">https://yrotciv.itch.io/phenomenon-anatomy</a>',
+        youGotBallsDescription: "Description: A simple rolling-ball game made with Unity 3D.",
+        youGotBallsTech: "Technologies used: Unity 3D",
+        youGotBallsLink: 'Link: <a href="https://play.google.com/store/apps/details?id=com.DefaultCompany.YouGotBalls" target="_blank">https://play.google.com/store/apps/details?id=com.DefaultCompany.YouGotBalls</a>',
+        mosquitoTitle: "Mosquito! (2023)",
+        mosquitoDescription: "Description: A mosquito-catching game made with p5.js.",
+        mosquitoTech: "Technologies used: p5.js",
+        mosquitoLink: 'Link: <a href="https://rhdn520.github.io/mosquito/" target="_blank">https://rhdn520.github.io/mosquito</a>',
+        scholarshipIlwoon: "Ilun Science & Technology Foundation (Dec 2025-Present)",
+        scholarshipGwanak: "Gwanak Scholarship (Mar 2018-Dec 2024)",
+        scholarshipYongwoon: "Yongwoon Scholarship Foundation (2017)"
+      }
+    };
+
+    const LANGUAGE_STORAGE_KEY = "website-language";
+    const fallbackLanguage = "ko";
+
+    function getSavedLanguage() {
+      try {
+        return localStorage.getItem(LANGUAGE_STORAGE_KEY);
+      } catch (error) {
+        return null;
+      }
+    }
+
+    function saveLanguage(language) {
+      try {
+        localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
+      } catch (error) {
+        return;
+      }
+    }
+
+    function setLanguage(language) {
+      const selectedLanguage = translations[language] ? language : fallbackLanguage;
+      const selectedTranslation = translations[selectedLanguage];
+
+      document.documentElement.lang = selectedLanguage;
+      document.title = selectedTranslation.documentTitle;
+
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const translationKey = element.dataset.i18n;
+
+        if (selectedTranslation[translationKey]) {
+          element.innerHTML = selectedTranslation[translationKey];
+        }
+      });
+
+      document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+        const translationKey = element.dataset.i18nAlt;
+
+        if (selectedTranslation[translationKey]) {
+          element.setAttribute("alt", selectedTranslation[translationKey]);
+        }
+      });
+
+      document.querySelectorAll("[data-lang-button]").forEach((button) => {
+        const isActive = button.dataset.langButton === selectedLanguage;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+      });
+
+      saveLanguage(selectedLanguage);
+    }
+
+    document.querySelectorAll("[data-lang-button]").forEach((button) => {
+      button.addEventListener("click", () => {
+        setLanguage(button.dataset.langButton);
+      });
+    });
+
+    setLanguage(getSavedLanguage() || fallbackLanguage);
+  </script>
 </body>
 
 </html>
