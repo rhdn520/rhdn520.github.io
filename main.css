@@ -88,6 +88,7 @@
 *{
     font-family: 'Noto Sans KR', sans-serif;
     box-sizing: border-box;
+    word-break: keep-all;
 }
 
 body{
@@ -222,7 +223,7 @@ section ul{
 
 li{
     width: 100%;
-    word-break: break-all;
+    word-break: keep-all;
 }
 
 section ul li ul{
