@@ -1,0 +1,1076 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3efe7" />
+    <title>Bottom-up vs. Top-down</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="deck" aria-label="Paper presentation">
+      <div class="deck__grain" aria-hidden="true"></div>
+
+      <section class="slides" id="slides" aria-live="polite">
+        <article class="slide slide--title is-active" data-slide="0">
+          <div class="slide__index">01 <span>/</span> 20</div>
+          <div class="title-copy">
+            <h1>
+              Bottom-up <em>vs.</em> Top-down
+            </h1>
+            <p class="title-copy__subtitle">
+              Trade-offs in Efficiency, Understanding,<br />
+              Freedom and Creativity with AI
+            </p>
+            <p class="title-copy__authors">
+              Gonzalo Gabriel Méndez · Uta Hinrichs · Miguel A. Nacenta
+            </p>
+          </div>
+          <p class="presenter">2025-21624 Seungwoo-Choi</p>
+        </article>
+
+        <article class="slide slide--research" data-slide="1">
+          <div class="slide__index">02 <span>/</span> 20</div>
+          <div class="research-copy">
+            <p class="slide-kicker">01 / RESEARCH QUESTION</p>
+            <h2 class="slide-heading">How do non-experts create visualizations?</h2>
+            <p class="research-copy__lead">
+              As visualization tools become more accessible,<br />
+              creating a visualization no longer belongs only to experts.<br />
+              This research examines <span class="research-emphasis">how non-experts create visualizations</span>—<br />
+              and <span class="research-emphasis">how the tools they use shape that process</span>.
+            </p>
+            <h3 class="approach-heading">Two different approaches</h3>
+            <div class="approach-grid">
+              <div class="approach">
+                <span class="approach__number">01</span>
+                <h3>Top-down</h3>
+                <p>Start with attributes and refine the visual representation.</p>
+                <span class="approach__tool">TABLEAU</span>
+              </div>
+              <div class="approach">
+                <span class="approach__number">02</span>
+                <h3>Bottom-up</h3>
+                <p>Assemble individual data units into an overall visualization.</p>
+                <span class="approach__tool">iVoLVER</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--background" data-slide="2">
+          <div class="slide__index">03 <span>/</span> 20</div>
+          <div class="background-copy">
+            <p class="slide-kicker">02 / BACKGROUND</p>
+            <h2 class="slide-heading">From data to visualization</h2>
+            <p class="background-copy__lead">
+              Visualization is a process of translating data into visual form.<br />
+              The direction of that process changes how people create.
+            </p>
+
+            <div class="process-layout">
+              <div class="process-column">
+                <div class="process-stack" aria-label="Visualization process">
+                <button class="process-step" type="button" data-step="rendering">
+                  <span>04</span>
+                  <strong>Rendering</strong>
+                </button>
+                <div class="mapping-anchor">
+                  <button class="process-step" type="button" data-step="mapping">
+                    <span>03</span>
+                    <strong>Mapping</strong>
+                  </button>
+                  <div class="mapping-note" id="mapping-note" aria-hidden="true">
+                    <p>This study pays particular attention to <strong>Mapping</strong>.</p>
+                  </div>
+                </div>
+                <button class="process-step" type="button" data-step="filtering">
+                  <span>02</span>
+                  <strong>Filtering</strong>
+                </button>
+                <button class="process-step" type="button" data-step="analysis">
+                  <span>01</span>
+                  <strong>Data analysis</strong>
+                </button>
+                </div>
+              </div>
+
+              <div class="direction-panel">
+                <div class="direction-row">
+                  <div class="direction direction--top">
+                    <span class="direction__label">TOP-DOWN</span>
+                    <p>Decisions begin at the attribute level,<br />then move toward visual representation.</p>
+                  </div>
+                  <span class="direction__arrow direction__arrow--top" aria-hidden="true"></span>
+                </div>
+                <div class="direction-row">
+                  <div class="direction direction--bottom">
+                    <span class="direction__label">BOTTOM-UP</span>
+                    <p>Individual data units are assembled incrementally<br />into a whole visualization.</p>
+                  </div>
+                  <span class="direction__arrow direction__arrow--bottom" aria-hidden="true"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--tools" data-slide="3">
+          <div class="slide__index">04 <span>/</span> 20</div>
+          <div class="tools-copy">
+            <p class="slide-kicker">03 / TWO TOOLS</p>
+            <h2 class="slide-heading">Two tools, two approaches</h2>
+            <div class="tool-videos">
+              <article class="tool-video">
+                <div class="tool-video__heading">
+                  <span class="tool-video__number">01</span>
+                  <h3>Tableau</h3>
+                  <span class="tool-video__approach">TOP-DOWN</span>
+                </div>
+                <div class="tool-video__frame">
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/Bm652LjBAyE"
+                    title="Tableau demonstration"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                </div>
+                <a class="tool-video__link" href="https://www.youtube.com/watch?v=Bm652LjBAyE" target="_blank" rel="noreferrer">Watch on YouTube ↗</a>
+                <p>Specify attributes and let the tool generate a visual form.</p>
+              </article>
+              <article class="tool-video">
+                <div class="tool-video__heading">
+                  <span class="tool-video__number">02</span>
+                  <h3>iVoLVER</h3>
+                  <span class="tool-video__approach">BOTTOM-UP</span>
+                </div>
+                <div class="tool-video__frame">
+                  <iframe
+                    src="https://www.youtube-nocookie.com/embed/jtFEpMOdq-Y"
+                    title="iVoLVER demonstration"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                </div>
+                <a class="tool-video__link" href="https://youtu.be/jtFEpMOdq-Y?si=QC3ZF8UK7BdQrg9u" target="_blank" rel="noreferrer">Watch on YouTube ↗</a>
+                <p>Connect visual elements and data units to construct a whole.</p>
+              </article>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--method" data-slide="4">
+          <div class="slide__index">05 <span>/</span> 20</div>
+          <div class="method-copy">
+            <p class="slide-kicker">04 / METHODOLOGY</p>
+            <h2 class="slide-heading">How the comparison was conducted</h2>
+
+            <section class="method-section method-section--study">
+              <p class="method-section__label">STUDY DESIGN</p>
+              <div class="study-flow">
+                <div class="study-stage">
+                  <span class="study-stage__number">01</span>
+                  <div>
+                    <h3>Pilot study</h3>
+                    <p>Visualization students<br />Two sessions · Screen recordings · Survey · Group discussion</p>
+                  </div>
+                </div>
+                <span class="study-flow__arrow" aria-hidden="true">→</span>
+                <div class="study-stage">
+                  <span class="study-stage__number">02</span>
+                  <div>
+                    <h3>In-depth comparison</h3>
+                    <p>Students, graduate students &amp; faculty<br />Screen recordings · Written notes · Interviews</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="method-section method-section--tasks">
+              <p class="method-section__label">TWO DATASETS X THREE TASKS</p>
+              <div class="task-grid">
+                <div class="task-set">
+                  <h3>Oil</h3>
+                  <div class="task-list">
+                    <p><span>V1</span>Production by country</p>
+                    <p><span>V2</span>Countries and their regions (Country × Region)</p>
+                    <p><span>V3</span>Production, consumption &amp; population</p>
+                  </div>
+                </div>
+                <div class="task-set">
+                  <h3>Movie</h3>
+                  <div class="task-list">
+                    <p><span>V1</span>Budget by movie</p>
+                    <p><span>V2</span>Movies and their genres (Movie × Genre)</p>
+                    <p><span>V3</span>Budget, gross revenue &amp; duration</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </article>
+
+        <article class="slide slide--pilot-participants" data-slide="5">
+          <div class="slide__index">06 <span>/</span> 20</div>
+          <div class="pilot-copy">
+            <p class="slide-kicker">05 / PILOT STUDY</p>
+            <h2 class="slide-heading">Who took part?</h2>
+            <div class="participant-layout">
+              <div class="participant-count">
+                <strong>11</strong>
+                <span>participants<br />in the final analysis</span>
+              </div>
+              <div class="participant-details">
+                <p><strong>19</strong> of 36 enrolled students volunteered.</p>
+                <p><strong>7 male · 4 female</strong><br />Age 21–26 · median 22</p>
+                <p>Recruited from an introductory university<br />information visualization course.</p>
+              </div>
+              <div class="participant-backgrounds">
+                <p class="method-section__label">BACKGROUNDS</p>
+                <p>Computer science · Information technology<br />Language &amp; culture · Statistics</p>
+                <p class="participant-note">All were novices in InfoVis.</p>
+              </div>
+            </div>
+            <div class="participant-procedure">
+              <div class="procedure-session">
+                <span>SESSION 1</span>
+                <strong>Groups split</strong>
+                <small>Tableau / iVoLVER<br />3 tasks · 30 min</small>
+              </div>
+              <i aria-hidden="true">⇄</i>
+              <div class="procedure-session">
+                <span>SESSION 2</span>
+                <strong>Tools switched</strong>
+                <small>iVoLVER / Tableau<br />3 tasks · 30 min</small>
+              </div>
+            </div>
+            <div class="pilot-tasks">
+              <p class="method-section__label">TASK STRUCTURE · PER SESSION</p>
+              <div class="pilot-task-list">
+                <div><strong>V1</strong><span>Oil: production by country<br />Movie: budget by movie</span></div>
+                <div><strong>V2</strong><span>Oil: countries × regions<br />Movie: movies × genres</span></div>
+                <div><strong>V3</strong><span>Oil: production, consumption + population<br />Movie: budget, gross revenue + duration</span></div>
+              </div>
+              <p class="pilot-task-note">The dataset and equivalent task set changed between sessions.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--pilot-analysis" data-slide="6">
+          <div class="slide__index">07 <span>/</span> 20</div>
+          <div class="pilot-copy">
+            <p class="slide-kicker">06 / PILOT STUDY</p>
+            <h2 class="slide-heading">Data collection &amp; analysis</h2>
+            <div class="analysis-grid">
+              <section class="analysis-card analysis-card--recording">
+                <strong>650</strong>
+                <span>minutes of screen recordings</span>
+                <p>Participants’ visualization processes were captured during the study sessions.</p>
+              </section>
+              <section class="analysis-card">
+                <p class="method-section__label">QUALITATIVE CODING</p>
+                <h3>Questionnaire statements<br />were categorized and analyzed.</h3>
+                <p>Codes focused on design approaches, satisfaction, rationales, useful and problematic features, and tool benefits and limitations.</p>
+              </section>
+              <section class="analysis-card analysis-card--discussion">
+                <strong>17 min</strong>
+                <span>group discussion</span>
+                <p>At the end of Session 2, participants compared their experiences with both tools.</p>
+              </section>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--pilot-findings" data-slide="7">
+          <div class="slide__index">08 <span>/</span> 20</div>
+          <div class="pilot-copy">
+            <p class="slide-kicker">07 / PILOT STUDY</p>
+            <h2 class="slide-heading">Two tools, different experiences</h2>
+            <div class="finding-grid">
+              <section class="finding finding--tableau">
+                <p class="method-section__label"><span class="tool-label tool-label--tableau is-highlighted" data-tool-label="tableau">TABLEAU</span> · TOP-DOWN</p>
+                <h3 class="finding-title finding-title--tableau is-highlighted">Automation invites exploration.</h3>
+                <p>Participants explored more alternatives, mostly through the <button class="inline-modal-trigger" type="button" data-modal-image="assets/tableau_showme.png">Show Me pane</button> and trial-and-error.</p>
+              </section>
+              <section class="finding finding--ivoLVER">
+                <p class="method-section__label"><span class="tool-label tool-label--ivolver" data-tool-label="ivolver">iVoLVER</span> · BOTTOM-UP</p>
+                <h3 class="finding-title finding-title--ivolver">Construction preserves flexibility.</h3>
+                <p>Its visualizations were more diverse and included non-standard forms.</p>
+              </section>
+            </div>
+            <div class="quote-bubble" id="quote-bubble" data-tool="tableau" role="status">
+              <span id="quote-speaker">s7 · Tableau</span>
+              <blockquote id="quote-text">“(I created a visualization by) dragging and dropping the attributes and Tableau did the rest and I just kept moving them around until I found one I liked.”</blockquote>
+            </div>
+            <div class="voice-strip" aria-label="Participant voices">
+              <button class="voice-button voice-button--tableau is-selected" type="button" data-voice="tableau" data-tool="tableau" aria-label="Show Tableau participant quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>s7</small>
+              </button>
+              <button class="voice-button voice-button--tableau" type="button" data-voice="chart" data-tool="tableau" aria-label="Show chart selection participant quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>s8</small>
+              </button>
+              <button class="voice-button voice-button--ivoLVER" type="button" data-voice="messing" data-tool="ivolver" aria-label="Show mapping participant quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>s9</small>
+              </button>
+              <button class="voice-button voice-button--ivoLVER" type="button" data-voice="shapes" data-tool="ivolver" aria-label="Show visual preference participant quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>s2</small>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--research-questions" data-slide="8">
+          <div class="slide__index">09 <span>/</span> 20</div>
+          <div class="research-questions-copy">
+            <p class="slide-kicker">08 / PILOT STUDY</p>
+            <h2 class="slide-heading">Questions sharpened by the pilot study</h2>
+            <div class="research-question-list">
+              <article class="research-question">
+                <span class="research-question__tag">RQ1</span>
+                <p>What characterizes and drives the overall <span class="rq-highlight">visualization design process</span> using the two tools?</p>
+              </article>
+              <article class="research-question">
+                <span class="research-question__tag">RQ2</span>
+                <p>Do top-down and bottom-up construction approaches influence<br />visualization <span class="rq-highlight">design decisions</span> and the exploration of alternative designs—and if so, how?</p>
+              </article>
+              <article class="research-question">
+                <span class="research-question__tag">RQ3</span>
+                <p>How do non-experts <span class="rq-highlight">experience</span> these two approaches in comparison?</p>
+              </article>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--indepth-participants" data-slide="9">
+          <div class="slide__index">10 <span>/</span> 20</div>
+          <div class="pilot-copy">
+            <p class="slide-kicker">09 / IN-DEPTH COMPARISON</p>
+            <h2 class="slide-heading">Who took part?</h2>
+            <div class="indepth-participant-layout">
+              <div class="participant-count">
+                <strong>10</strong>
+                <span>participants<br />in individual sessions</span>
+              </div>
+              <div class="participant-details">
+                <p><strong>3 female · 7 male</strong><br />Age 20–46 · median 28</p>
+                <p>Recruited from the university<br />via word-of-mouth.</p>
+                <p class="participant-note">None had participated in the pilot.</p>
+              </div>
+              <div class="participant-backgrounds">
+                <p class="method-section__label">BACKGROUND</p>
+                <p><strong>7</strong> undergraduate or graduate students<br />Computer science · Mathematics · Physics</p>
+                <p><strong>3</strong> professionals in related technical fields.</p>
+              </div>
+            </div>
+            <div class="indepth-note">
+              <span>No InfoVis course or formal visualization training.</span>
+              <span>£10 gift voucher</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--indepth-analysis" data-slide="10">
+          <div class="slide__index">11 <span>/</span> 20</div>
+          <div class="pilot-copy">
+            <p class="slide-kicker">10 / IN-DEPTH COMPARISON</p>
+            <h2 class="slide-heading">Data collection &amp; analysis</h2>
+            <div class="indepth-analysis-grid">
+              <section class="analysis-card">
+                <strong>~2 h</strong>
+                <span>per individual session</span>
+                <p>Visualization concepts → tool introduction → tasks → questionnaire and interview, repeated with the second tool.</p>
+              </section>
+              <section class="analysis-card">
+                <p class="method-section__label">EVIDENCE COLLECTED</p>
+                <h3>Multiple views of the process.</h3>
+                <p>Questionnaires, written observation notes, screen recordings, interview transcripts, and visualization outcomes.</p>
+                <p class="analysis-highlight"><strong>415 min</strong> of video data analyzed</p>
+              </section>
+              <section class="analysis-card">
+                <p class="method-section__label">QUALITATIVE ANALYSIS</p>
+                <h3>Interview transcripts were thematically coded.</h3>
+                <p>Two researchers coded independently, then refined the scheme through regular discussion.</p>
+              </section>
+            </div>
+            <p class="indepth-analysis-note">Tool order was counterbalanced to reduce learning effects.</p>
+          </div>
+        </article>
+
+        <article class="slide slide--visualization-results" data-slide="11">
+          <div class="slide__index">12 <span>/</span> 20</div>
+          <div class="visualization-results-copy">
+            <p class="slide-kicker">11 / IN-DEPTH COMPARISON</p>
+            <h2 class="slide-heading">Visualizations built by participants</h2>
+
+            <div class="visualization-stage">
+              <figure class="visualization-results-figure" id="visualization-results-figure">
+                <img
+                  src="assets/visualization_res.png"
+                  alt="Overview of visualizations built by participants using Tableau Desktop and iVoLVER, organized by task and participant"
+                  class="visualization-results-image"
+                  role="button"
+                  tabindex="0"
+                  aria-label="Open visualization results in a larger view"
+                />
+                <figcaption>Click image to enlarge overview · Or click a participant below to inspect individual workflows</figcaption>
+              </figure>
+
+              <div class="participant-bubble" id="participant-bubble" role="dialog" aria-label="Participant visualization details" hidden>
+                <div class="participant-bubble__header">
+                  <div class="participant-bubble__identity">
+                    <span class="participant-bubble__badge" id="bubble-participant-id">p1</span>
+                    <div class="participant-bubble__info">
+                      <h3 class="participant-bubble__title" id="bubble-participant-title"></h3>
+                      <p class="participant-bubble__subtitle" id="bubble-participant-subtitle"></p>
+                    </div>
+                  </div>
+                  <button class="participant-bubble__close" id="bubble-close-btn" type="button" aria-label="Close participant details">×</button>
+                </div>
+
+                <div class="participant-bubble__columns">
+                  <div class="bubble-tool-col bubble-tool-col--tableau">
+                    <div class="bubble-tool-header">
+                      <span class="bubble-tool-badge">TABLEAU · TOP-DOWN</span>
+                      <p class="bubble-tool-desc" id="bubble-tableau-desc"></p>
+                    </div>
+                    <div class="bubble-tasks-grid" id="bubble-tableau-tasks"></div>
+                  </div>
+
+                  <div class="bubble-tool-col bubble-tool-col--ivolver">
+                    <div class="bubble-tool-header">
+                      <span class="bubble-tool-badge">iVoLVER · BOTTOM-UP</span>
+                      <p class="bubble-tool-desc" id="bubble-ivolver-desc"></p>
+                    </div>
+                    <div class="bubble-tasks-grid" id="bubble-ivolver-tasks"></div>
+                  </div>
+                </div>
+
+                <div class="participant-bubble__quote">
+                  <blockquote id="bubble-quote-text"></blockquote>
+                  <span class="participant-bubble__speaker" id="bubble-quote-speaker"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="participant-strip" id="participant-strip" aria-label="Participant list for individual comparison">
+              <button class="participant-button" type="button" data-participant="p1" aria-label="View Participant p1 visualizations">
+                <span class="participant-button__avatar">
+                  <span class="participant-button__head"></span>
+                  <span class="participant-button__body"></span>
+                </span>
+                <span class="participant-button__label">p1</span>
+              </button>
+              <button class="participant-button" type="button" data-participant="p2" aria-label="View Participant p2 visualizations">
+                <span class="participant-button__avatar">
+                  <span class="participant-button__head"></span>
+                  <span class="participant-button__body"></span>
+                </span>
+                <span class="participant-button__label">p2</span>
+              </button>
+              <button class="participant-button" type="button" data-participant="p3" aria-label="View Participant p3 visualizations">
+                <span class="participant-button__avatar">
+                  <span class="participant-button__head"></span>
+                  <span class="participant-button__body"></span>
+                </span>
+                <span class="participant-button__label">p3</span>
+              </button>
+              <button class="participant-button" type="button" data-participant="p4" aria-label="View Participant p4 visualizations">
+                <span class="participant-button__avatar">
+                  <span class="participant-button__head"></span>
+                  <span class="participant-button__body"></span>
+                </span>
+                <span class="participant-button__label">p4</span>
+              </button>
+              <button class="participant-button" type="button" data-participant="p5" aria-label="View Participant p5 visualizations">
+                <span class="participant-button__avatar">
+                  <span class="participant-button__head"></span>
+                  <span class="participant-button__body"></span>
+                </span>
+                <span class="participant-button__label">p5</span>
+              </button>
+              <button class="participant-button" type="button" data-participant="p6" aria-label="View Participant p6 visualizations">
+                <span class="participant-button__avatar">
+                  <span class="participant-button__head"></span>
+                  <span class="participant-button__body"></span>
+                </span>
+                <span class="participant-button__label">p6</span>
+              </button>
+              <button class="participant-button" type="button" data-participant="p7" aria-label="View Participant p7 visualizations">
+                <span class="participant-button__avatar">
+                  <span class="participant-button__head"></span>
+                  <span class="participant-button__body"></span>
+                </span>
+                <span class="participant-button__label">p7</span>
+              </button>
+              <button class="participant-button" type="button" data-participant="p8" aria-label="View Participant p8 visualizations">
+                <span class="participant-button__avatar">
+                  <span class="participant-button__head"></span>
+                  <span class="participant-button__body"></span>
+                </span>
+                <span class="participant-button__label">p8</span>
+              </button>
+              <button class="participant-button" type="button" data-participant="p9" aria-label="View Participant p9 visualizations">
+                <span class="participant-button__avatar">
+                  <span class="participant-button__head"></span>
+                  <span class="participant-button__body"></span>
+                </span>
+                <span class="participant-button__label">p9</span>
+              </button>
+              <button class="participant-button" type="button" data-participant="p10" aria-label="View Participant p10 visualizations">
+                <span class="participant-button__avatar">
+                  <span class="participant-button__head"></span>
+                  <span class="participant-button__body"></span>
+                </span>
+                <span class="participant-button__label">p10</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--construction-process" data-slide="12">
+          <div class="slide__index">13 <span>/</span> 20</div>
+          <div class="construction-copy">
+            <p class="slide-kicker">12 / IN-DEPTH COMPARISON</p>
+            <h2 class="slide-heading">Visualization construction process</h2>
+
+            <div class="construction-stage">
+              <figure class="construction-process-figure" id="construction-process-figure">
+                <img
+                  class="construction-process-image"
+                  src="assets/vis_process.png"
+                  alt="Stages of the observed visualization construction processes with iVoLVER and Tableau Desktop"
+                  role="button"
+                  tabindex="0"
+                  aria-label="Enlarge visualization construction process diagram"
+                />
+                <figcaption>Click diagram to enlarge · Or click participant voices below to inspect construction experiences</figcaption>
+              </figure>
+
+              <div class="construction-quote-bubble" id="construction-quote-bubble" role="dialog" aria-label="Participant construction experience" hidden>
+                <div class="construction-quote-bubble__header">
+                  <div class="construction-quote-bubble__identity">
+                    <span class="construction-quote-badge" id="construction-quote-badge">p3</span>
+                    <div class="construction-quote-bubble__info">
+                      <h3 class="construction-quote-bubble__title" id="construction-quote-title">Pre-Planning &amp; Idea Generation</h3>
+                      <p class="construction-quote-bubble__subtitle" id="construction-quote-speaker">p3 · Novice in InfoVis · iVoLVER V1</p>
+                    </div>
+                  </div>
+                  <button class="construction-quote-bubble__close" id="construction-bubble-close-btn" type="button" aria-label="Close participant quote">×</button>
+                </div>
+
+                <div class="construction-quote-bubble__body">
+                  <div class="construction-quote-content">
+                    <span class="construction-quote-label">OBSERVED PROCESS &amp; INTERVIEW</span>
+                    <blockquote id="construction-quote-text">“For the first design <u>I just thought about all the general bar graphs</u> that we see all the time in, you know, publications and stuff like that.”</blockquote>
+                    <p class="construction-quote-takeaway" id="construction-quote-takeaway">Idea generation occurs before visual mapping: P3 formulated a mental model of standard publication bar charts before connecting data to marks.</p>
+                  </div>
+
+                  <div class="construction-quote-visual" id="construction-quote-visual" role="button" tabindex="0" aria-label="Enlarge participant visualization artifact">
+                    <span class="construction-quote-visual__tag" id="construction-quote-visual-tag">iVoLVER V1 MODEL</span>
+                    <div class="construction-quote-visual__img-wrap">
+                      <img id="construction-quote-visual-img" src="assets/ivolver_v1_p3.png" alt="iVoLVER V1 visualization by p3" />
+                    </div>
+                    <span class="construction-quote-visual__caption" id="construction-quote-visual-caption">Publication bar graph model · Click to enlarge</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="voice-strip construction-voice-strip" aria-label="In-depth comparison participant voices">
+              <button class="voice-button voice-button--ivoLVER" type="button" data-construction-voice="p3" aria-pressed="false" aria-label="Show participant p3 quote and visualization">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p3</small>
+              </button>
+              <button class="voice-button voice-button--ivoLVER" type="button" data-construction-voice="p8" aria-pressed="false" aria-label="Show participant p8 quote and visualization">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p8</small>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--design-approach" data-slide="13">
+          <div class="slide__index">14 <span>/</span> 20</div>
+          <div class="indepth-copy">
+            <p class="slide-kicker">13 / IN-DEPTH COMPARISON</p>
+            <h2 class="slide-heading">Tool’s influence on the design approach</h2>
+
+            <div class="finding-grid">
+              <section class="finding finding--tableau">
+                <p class="method-section__label"><span class="tool-label tool-label--tableau" data-tool-label="tableau">TABLEAU</span> · TOP-DOWN</p>
+                <h3 class="finding-title finding-title--tableau">Tool-driven exploration &amp; default adoption.</h3>
+                <ul class="comparison-list">
+                  <li><strong>Emergent design:</strong> Exploration was tool-driven; charts emerged interactively by placing attributes on shelves without a prior mental model.</li>
+                  <li><strong>Default acceptance:</strong> Participants readily accepted automated representations (e.g., standard bar charts) and decided later.</li>
+                  <li><strong>Cognitive delegation:</strong> Rapid and effortless for standard charts, but visual composition was deferred to the software.</li>
+                </ul>
+              </section>
+
+              <section class="finding finding--ivoLVER">
+                <p class="method-section__label"><span class="tool-label tool-label--ivolver" data-tool-label="ivolver">iVoLVER</span> · BOTTOM-UP</p>
+                <h3 class="finding-title finding-title--ivolver">Pre-planning precedes visual mapping.</h3>
+                <ul class="comparison-list">
+                  <li><strong>Mental model upfront:</strong> Participants conceived a design idea in mind before beginning any practical data-to-visual mapping.</li>
+                  <li><strong>Strategic decisions required:</strong> Users had to deliberately plan mark types, ordering, scaling, and link trajectories.</li>
+                  <li><strong>Bespoke design freedom:</strong> Making selections before seeing default templates encouraged unique, intentional compositions.</li>
+                </ul>
+              </section>
+            </div>
+
+            <div class="takeaway-banner">
+              <strong>Cross-tool anchoring effect:</strong> 3 of 5 participants who used Tableau first noted that Tableau’s automated outputs directly anchored their subsequent design in iVoLVER (e.g., defaulting to standard bar charts).
+            </div>
+
+            <div class="quote-bubble" id="approach-quote-bubble" data-tool="tableau" role="status">
+              <span id="approach-quote-speaker">p1 · Novice in InfoVis · Tableau</span>
+              <blockquote id="approach-quote-text">“I mean, <u>I don’t really have to think about it [the design] in any way</u>. I just put the title in one column and the value in the rows and, you know, that automatically created the bar chart, which is perfectly adequate... I didn’t necessarily have a bar chart in mind. I just wanted to put it there and <u>decide later on how it’s best represented depending on what the program does</u>.”</blockquote>
+            </div>
+
+            <div class="voice-strip" aria-label="Participant voices on design approach">
+              <button class="voice-button voice-button--tableau is-selected" type="button" data-approach-voice="p1" data-tool="tableau" aria-label="Show participant p1 quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p1</small>
+              </button>
+              <button class="voice-button voice-button--tableau" type="button" data-approach-voice="p5" data-tool="tableau" aria-label="Show participant p5 quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p5</small>
+              </button>
+              <button class="voice-button voice-button--tableau" type="button" data-approach-voice="p8" data-tool="tableau" aria-label="Show participant p8 anchoring quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p8*</small>
+              </button>
+              <button class="voice-button voice-button--ivoLVER" type="button" data-approach-voice="p2" data-tool="ivolver" aria-label="Show participant p2 quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p2</small>
+              </button>
+              <button class="voice-button voice-button--ivoLVER" type="button" data-approach-voice="p9" data-tool="ivolver" aria-label="Show participant p9 quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p9</small>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--data-manipulation" data-slide="14">
+          <div class="slide__index">15 <span>/</span> 20</div>
+          <div class="indepth-copy">
+            <p class="slide-kicker">14 / IN-DEPTH COMPARISON</p>
+            <h2 class="slide-heading">Manipulating data &amp; associated visual elements</h2>
+
+            <div class="finding-grid">
+              <section class="finding finding--tableau">
+                <p class="method-section__label"><span class="tool-label tool-label--tableau" data-tool-label="tableau">TABLEAU</span> · SHELF ABSTRACTION</p>
+                <h3 class="finding-title finding-title--tableau">Rapid automation, black-box abstraction.</h3>
+                <ul class="comparison-list">
+                  <li><strong>High-level attribute shelves:</strong> Rapid, fluid generation with minimal interactions; scales effortlessly to large datasets.</li>
+                  <li><strong>Pre-canned constraints:</strong> Confines visual structure to predefined categories; difficult to escape rigid coordinate grids.</li>
+                  <li><strong>Black-box abstraction:</strong> Automated generation conceals mapping mechanics; sudden layout recalculations cause confusion (“disaster!”).</li>
+                  <li><em>Limitation:</em> Clean canvas, but users lack deep understanding of internal data-to-mark bindings.</li>
+                </ul>
+              </section>
+
+              <section class="finding finding--ivoLVER">
+                <p class="method-section__label"><span class="tool-label tool-label--ivolver" data-tool-label="ivolver">iVoLVER</span> · ATOMIC CONTROL</p>
+                <h3 class="finding-title finding-title--ivolver">Laborious manipulation, flexible creation.</h3>
+                <ul class="comparison-list">
+                  <li><strong>Laborious atomic binding:</strong> Operating on individual data points requires repetitive manual effort (e.g., repeatedly dragging marks for each value).</li>
+                  <li><strong>Unbounded flexibility:</strong> Direct mapping lets creators freely invent custom geometries, spatial groupings, and multi-attribute encodings.</li>
+                  <li><strong>Process transparency:</strong> Low-level stepwise assembly reveals exactly <em>how</em> and <em>why</em> data values bind to marks.</li>
+                  <li><em>Limitation:</em> Visual link connections become cluttered and challenging to manage as data density increases.</li>
+                </ul>
+              </section>
+            </div>
+
+            <div class="quote-bubble" id="manipulation-quote-bubble" data-tool="tableau" role="status">
+              <span id="manipulation-quote-speaker">p4 · Novice in InfoVis · Tableau (Abstraction)</span>
+              <blockquote id="manipulation-quote-text">“<u>At one point I clicked on it, and it changed everything. I was like ‘This is a disaster!’</u> [...] I was just not quite sure what it was going to do once I put genre in columns. It was just very abstract.”</blockquote>
+            </div>
+
+            <div class="voice-strip" aria-label="Participant voices on data manipulation">
+              <button class="voice-button voice-button--tableau is-selected" type="button" data-manipulation-voice="p4" data-tool="tableau" aria-label="Show participant p4 abstraction quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p4</small>
+              </button>
+              <button class="voice-button voice-button--ivoLVER" type="button" data-manipulation-voice="p7" data-tool="ivolver" aria-label="Show participant p7 labor quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p7</small>
+              </button>
+              <button class="voice-button voice-button--ivoLVER" type="button" data-manipulation-voice="p10_free" data-tool="ivolver" aria-label="Show participant p10 freedom quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p10</small>
+              </button>
+              <button class="voice-button voice-button--ivoLVER" type="button" data-manipulation-voice="p10_trans" data-tool="ivolver" aria-label="Show participant p10 transparency quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p10*</small>
+              </button>
+              <button class="voice-button voice-button--ivoLVER" type="button" data-manipulation-voice="p5" data-tool="ivolver" aria-label="Show participant p5 clutter quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p5</small>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--control-authorship" data-slide="15">
+          <div class="slide__index">16 <span>/</span> 20</div>
+          <div class="indepth-copy">
+            <p class="slide-kicker">15 / IN-DEPTH COMPARISON</p>
+            <h2 class="slide-heading">Control and authorship: who designs the visual?</h2>
+
+            <div class="authorship-stats">
+              <div class="stat-card stat-card--tableau" data-tool="tableau">
+                <strong class="stat-card__num">8 / 10</strong>
+                <p class="stat-card__meta"><span class="tool-label tool-label--tableau" data-tool-label="tableau">TABLEAU</span> · Tool attribution (<em>“Tableau did a good job”</em>)</p>
+                <p class="stat-card__desc">System delegation: participants credited the software or explicitly separated user actions from automated rendering.</p>
+              </div>
+
+              <div class="stat-card stat-card--ivolver" data-tool="ivolver">
+                <strong class="stat-card__num">10 / 10</strong>
+                <p class="stat-card__meta"><span class="tool-label tool-label--ivolver" data-tool-label="ivolver">iVoLVER</span> · 1st-person pronouns (<em>“I did”</em>, <em>“I mapped”</em>)</p>
+                <p class="stat-card__desc">Full personal authorship: participants experienced complete agency, crafting each mapping decision themselves.</p>
+              </div>
+            </div>
+
+            <div class="authorship-cards">
+              <div class="agency-card agency-card--tableau" data-tool="tableau">
+                <h4><span class="finding-title finding-title--tableau">Delegated Execution &amp; Automated Output</span></h4>
+                <p>Users act as directors requesting visual outputs: <em>“You just throw data at the system, and it generates for you.”</em> Cognitive investment shifts from composition to inspection.</p>
+              </div>
+
+              <div class="agency-card agency-card--ivolver" data-tool="ivolver">
+                <h4><span class="finding-title finding-title--ivolver">Active Ownership &amp; Deep Involvement</span></h4>
+                <p>Designing requires intimate involvement with the data. Users feel craftsman-like responsibility because every coordinate, mark size, and category boundary is shaped by their own hands.</p>
+              </div>
+            </div>
+
+            <div class="quote-bubble" id="authorship-quote-bubble" data-tool="tableau" role="status">
+              <span id="authorship-quote-speaker">p8 · Novice in InfoVis · Tableau (Delegation)</span>
+              <blockquote id="authorship-quote-text">“<u>[In] Tableau you just throw it at the system</u>; throw everything and then it generates for you.”</blockquote>
+            </div>
+
+            <div class="voice-strip" aria-label="Participant voices on control and authorship">
+              <button class="voice-button voice-button--tableau is-selected" type="button" data-authorship-voice="p8_throw" data-tool="tableau" aria-label="Show participant p8 delegation quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p8</small>
+              </button>
+              <button class="voice-button voice-button--tableau" type="button" data-authorship-voice="p6" data-tool="tableau" aria-label="Show participant p6 tool attribution quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p6</small>
+              </button>
+              <button class="voice-button voice-button--tableau" type="button" data-authorship-voice="p8_split" data-tool="tableau" aria-label="Show participant p8 separation quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p8*</small>
+              </button>
+              <button class="voice-button voice-button--ivoLVER" type="button" data-authorship-voice="p4" data-tool="ivolver" aria-label="Show participant p4 authorship quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p4</small>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--overall-preference" data-slide="16">
+          <div class="slide__index">17 <span>/</span> 20</div>
+          <div class="indepth-copy">
+            <p class="slide-kicker">16 / IN-DEPTH COMPARISON</p>
+            <h2 class="slide-heading">Overall preferences &amp; hybrid workflows</h2>
+
+            <div class="preference-triad">
+              <div class="pillar-card" data-tool="tableau">
+                <span class="pillar-tag"><span class="tool-label tool-label--tableau" data-tool-label="tableau">TABLEAU</span> · SPEED PREFERENCE</span>
+                <h4><span class="finding-title finding-title--tableau">Speed vs. Exploration</span></h4>
+                <div class="pref-score"><strong>7</strong><span>/10 Tableau</span> · <strong>1</strong><span>/10 iVoLVER</span></div>
+                <p>Tableau dominated on speed and immediate results.</p>
+                <p>Crucially, participants recognized a trade-off: Tableau for publishing where only the <strong>result</strong> matters; iVoLVER where understanding the <strong>process</strong> is paramount.</p>
+              </div>
+
+              <div class="pillar-card">
+                <span class="pillar-tag">CONTEXT FIT</span>
+                <h4>Scalability vs. Prototyping</h4>
+                <p><strong>Large datasets:</strong> Tableau is the only viable option due to scalability limits of manual dragging.</p>
+                <p><strong>Novel visual forms:</strong> iVoLVER excels when creating bespoke representations, custom groupings, or exploring unfamiliar data as you go.</p>
+              </div>
+
+              <div class="pillar-card" data-tool="ivolver">
+                <span class="pillar-tag"><span class="tool-label tool-label--ivolver" data-tool-label="ivolver">iVoLVER</span> · HYBRID &amp; PEDAGOGY</span>
+                <h4><span class="finding-title finding-title--ivolver">Ideation Pipeline &amp; Pedagogy</span></h4>
+                <p><strong>Hybrid pipeline:</strong> Explore and draft visual structures freely in iVoLVER → execute cleanly at scale in Tableau.</p>
+                <p><strong>InfoVis education:</strong> Tableau teaches taxonomies; iVoLVER lets novices “get hands dirty” to master foundational visual mapping principles.</p>
+              </div>
+            </div>
+
+            <div class="quote-bubble" id="preference-quote-bubble" data-tool="tableau" role="status">
+              <span id="preference-quote-speaker">p3 · Novice in InfoVis · Tableau vs iVoLVER</span>
+              <blockquote id="preference-quote-text">“<u>I did everything quicker in Tableau, even though there was less space for exploration</u>.”</blockquote>
+            </div>
+
+            <div class="voice-strip" aria-label="Participant voices on overall preferences and education">
+              <button class="voice-button voice-button--tableau is-selected" type="button" data-preference-voice="p3" data-tool="tableau" aria-label="Show participant p3 speed trade-off quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p3</small>
+              </button>
+              <button class="voice-button voice-button--tableau" type="button" data-preference-voice="p8_paper" data-tool="tableau" aria-label="Show participant p8 process vs result quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p8</small>
+              </button>
+              <button class="voice-button voice-button--ivoLVER" type="button" data-preference-voice="p9" data-tool="ivolver" aria-label="Show participant p9 visual play quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p9</small>
+              </button>
+              <button class="voice-button voice-button--ivoLVER" type="button" data-preference-voice="p7_hybrid" data-tool="ivolver" aria-label="Show participant p7 hybrid workflow quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p7</small>
+              </button>
+              <button class="voice-button voice-button--ivoLVER" type="button" data-preference-voice="p4_edu" data-tool="ivolver" aria-label="Show participant p4 education quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p4</small>
+              </button>
+              <button class="voice-button voice-button--ivoLVER" type="button" data-preference-voice="p7_edu" data-tool="ivolver" aria-label="Show participant p7 hands-on learning quote">
+                <span class="voice-button__head"></span>
+                <span class="voice-button__body"></span>
+                <small>p7*</small>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--contributions" data-slide="17">
+          <div class="slide__index">18 <span>/</span> 20</div>
+          <div class="indepth-copy">
+            <p class="slide-kicker">17 / RESEARCH CONTRIBUTIONS</p>
+            <h2 class="slide-heading">Core contributions: Characterizing vis construction</h2>
+
+            <div class="contribution-grid">
+              <div class="contribution-card">
+                <div class="contribution-card__header">
+                  <span class="contribution-card__num">01</span>
+                  <h3>Process Characterization</h3>
+                </div>
+                <p class="contribution-card__lead">First systematic empirical comparison of non-expert visualization construction across two opposing paradigms.</p>
+                <ul class="contribution-card__list">
+                  <li><strong>Top-down (Tableau):</strong> Fast attribute-level shelf manipulation with emergent exploration, but lacking upfront mental models.</li>
+                  <li><strong>Bottom-up (iVoLVER):</strong> Stepwise atomic mark binding requiring deliberate pre-planning and transparent data-to-visual bindings.</li>
+                </ul>
+              </div>
+
+              <div class="contribution-card">
+                <div class="contribution-card__header">
+                  <span class="contribution-card__num">02</span>
+                  <h3>Paradigm Influence on Design Decisions</h3>
+                </div>
+                <p class="contribution-card__lead">Revealing how interface affordances steer exploration, default adoption, and sense of authorship.</p>
+                <ul class="contribution-card__list">
+                  <li><strong>Default acceptance:</strong> Automated shelf layouts lead users to accept standard templates and anchor future designs.</li>
+                  <li><strong>Authorship divide:</strong> Delegation to software (8/10 in Tableau) vs. complete 1st-person agency (10/10 in iVoLVER).</li>
+                </ul>
+              </div>
+
+              <div class="contribution-card">
+                <div class="contribution-card__header">
+                  <span class="contribution-card__num">03</span>
+                  <h3>Systematic Trade-Off Reflection</h3>
+                </div>
+                <p class="contribution-card__lead">Theoretical reflection on the fundamental tensions in visualization tool design.</p>
+                <ul class="contribution-card__list">
+                  <li><strong>Efficiency vs. Thoughtfulness:</strong> Rapid breadth of alternatives comes at the expense of reflective understanding.</li>
+                  <li><strong>Magic vs. Literalism:</strong> Black-box convenience shields internal mechanics; hands-on friction builds deep visual literacy.</li>
+                </ul>
+              </div>
+
+              <div class="contribution-card">
+                <div class="contribution-card__header">
+                  <span class="contribution-card__num">04</span>
+                  <h3>Guidance for Hybrid Tools &amp; Education</h3>
+                </div>
+                <p class="contribution-card__lead">Actionable design principles for future authoring environments and InfoVis pedagogy.</p>
+                <ul class="contribution-card__list">
+                  <li><strong>The Space In-Between:</strong> Bridging the gap with mode switches (prototype freely in iVoLVER → scale cleanly in Tableau).</li>
+                  <li><strong>Pedagogical Value:</strong> Bottom-up constructive mapping as a powerful hands-on framework for teaching visualization literacy.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="takeaway-banner">
+              <strong>Core Impact:</strong> Visualization tools are not neutral conduits—their paradigm fundamentally dictates whether people act as passive consumers accepting automated defaults or as empowered authors who deeply comprehend and steer visual representations.
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--limitations" data-slide="18">
+          <div class="slide__index">19 <span>/</span> 20</div>
+          <div class="indepth-copy">
+            <p class="slide-kicker">18 / LIMITATIONS &amp; FUTURE WORKS</p>
+            <h2 class="slide-heading">Critical reflection: authors’ notes vs. my critique</h2>
+
+            <div class="limitations-grid">
+              <section class="limitation-column limitation-column--authors">
+                <div class="limitation-column__header">
+                  <span class="limitation-badge limitation-badge--authors">AUTHORS' STATED LIMITATIONS</span>
+                  <h3 class="limitation-column__title">Study Boundaries &amp; Scope</h3>
+                  <p class="limitation-column__desc">Methodological constraints acknowledged by the researchers.</p>
+                </div>
+
+                <div class="limitation-card">
+                  <div class="limitation-card__meta">
+                    <span class="limitation-card__icon">01</span>
+                    <strong>Two Specific Tools &amp; Idiosyncrasies</strong>
+                  </div>
+                  <p>Investigated only Tableau Desktop and iVoLVER. Tool-specific UI quirks and workflow nuances may have shaped behaviors beyond the general top-down/bottom-up paradigms.</p>
+                </div>
+
+                <div class="limitation-card">
+                  <div class="limitation-card__meta">
+                    <span class="limitation-card__icon">02</span>
+                    <strong>Imposed Tasks &amp; Controlled Setting</strong>
+                  </div>
+                  <p>Predefined datasets and constrained tasks (V1–V3) in a 1-hour lab experiment restricted organic, self-directed data exploration typical in authentic real-world workflows.</p>
+                </div>
+
+                <div class="limitation-card">
+                  <div class="limitation-card__meta">
+                    <span class="limitation-card__icon">03</span>
+                    <strong>STEM Cohort Demographic Bias</strong>
+                  </div>
+                  <p>All 10 participants possessed science/computing backgrounds with innate quantitative literacy; expanding to arts, humanities, teens, and seniors is needed.</p>
+                </div>
+              </section>
+
+              <section class="limitation-column limitation-column--critique">
+                <div class="limitation-column__header">
+                  <span class="limitation-badge limitation-badge--critique">MY CRITICAL REFLECTION</span>
+                  <h3 class="limitation-column__title">Presenter's Critique</h3>
+                  <p class="limitation-column__desc">Independent analytical critiques and overlooked dimensions.</p>
+                </div>
+
+                <div class="limitation-card">
+                  <div class="limitation-card__meta">
+                    <span class="limitation-card__icon">A</span>
+                    <strong>Lack of Objective Output Evaluation</strong>
+                  </div>
+                  <p>The study deeply examined <em>process</em> and <em>experience</em>, but omitted objective visual quality metrics—evaluating whether final charts were analytically superior, accurate, or aesthetically legible.</p>
+                </div>
+
+                <div class="limitation-card">
+                  <div class="limitation-card__meta">
+                    <span class="limitation-card__icon">B</span>
+                    <strong>Under-exploited Expressivity in Tasks</strong>
+                  </div>
+                  <p>The 3 activities were easily satisfied with standard charts; highly complex, non-standard visual forms were not strictly required, leaving iVoLVER's radical freedom partially untapped.</p>
+                </div>
+
+                <div class="limitation-card">
+                  <div class="limitation-card__meta">
+                    <span class="limitation-card__icon">C</span>
+                    <strong>Incomplete 'Literacy Floor' Assessment</strong>
+                  </div>
+                  <p>Because STEM participants already understood coordinate systems and data variables, the initial friction and barrier for true data novices with zero literacy remains untested.</p>
+                </div>
+              </section>
+            </div>
+
+            <div class="takeaway-banner takeaway-banner--future">
+              <strong>Future Horizon (The Space In-Between):</strong> The central design challenge is synthesizing hybrid systems that blend Tableau’s fluid scalability with iVoLVER’s reflective transparency, preserving personal authorship without cognitive fatigue.
+            </div>
+          </div>
+        </article>
+
+        <article class="slide slide--future-extension" data-slide="19">
+          <div class="slide__index">20 <span>/</span> 20</div>
+          <div class="indepth-copy indepth-copy--minimal">
+            <p class="slide-kicker">19 / EXTENSION &amp; FUTURE VISION</p>
+            <h2 class="slide-heading">Tools that think for us vs. tools that provoke thinking</h2>
+
+            <div class="minimal-extension">
+              <div class="minimal-extension__card minimal-extension__card--reflection">
+                <span class="minimal-extension__tag minimal-extension__tag--reflection">CORE REFLECTION</span>
+                <p>
+                  At its core, this study can ultimately be seen as comparing <strong>tools that think for us</strong> with <strong>tools that provoke thinking</strong>.
+                </p>
+              </div>
+
+              <div class="minimal-extension__card minimal-extension__card--extension">
+                <span class="minimal-extension__tag minimal-extension__tag--extension">PERSONAL EXTENSION</span>
+                <p>
+                  Recently, LLMs often replace human thinking rather than augmenting it—a loss of personal ownership I also felt when relying on AI to read research papers. Inspired by this study’s bottom-up paradigm, I built a tool to support understanding papers from the bottom up.
+                </p>
+              </div>
+
+              <div class="minimal-extension__action">
+                <a class="demo-link-btn" href="https://paper-insight.coverletteride.workers.dev/" target="_blank" rel="noopener noreferrer">
+                  <div class="demo-link-btn__content">
+                    <span class="demo-link-btn__badge">LIVE DEMO</span>
+                    <strong class="demo-link-btn__title">Paper-Insight</strong>
+                    <span class="demo-link-btn__url">paper-insight.coverletteride.workers.dev</span>
+                  </div>
+                  <span class="demo-link-btn__arrow" aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <nav class="controls" aria-label="Slide navigation">
+        <button class="controls__button" id="previous" type="button" aria-label="Previous slide" disabled>
+          <span aria-hidden="true">←</span>
+          <span>PREV</span>
+        </button>
+        <div class="controls__progress" aria-label="Current slide">
+          <span class="controls__progress-bar"><span id="progress"></span></span>
+          <span id="counter">01 / 01</span>
+        </div>
+        <button class="controls__button" id="next" type="button" aria-label="Next slide" disabled>
+          <span>NEXT</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </nav>
+    </main>
+
+    <dialog class="step-modal" id="step-modal" aria-labelledby="step-modal-title">
+      <button class="step-modal__close" id="step-modal-close" type="button" aria-label="Close">×</button>
+      <p class="step-modal__number" id="step-modal-number"></p>
+      <h2 id="step-modal-title"></h2>
+      <p id="step-modal-description"></p>
+      <img class="step-modal__image" id="step-modal-image" alt="" />
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>

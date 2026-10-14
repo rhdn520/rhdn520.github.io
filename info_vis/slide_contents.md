@@ -1,0 +1,165 @@
+# Paper Presentation: Bottom-up vs. Top-down (CHI 2017)
+- **Authors**: Gonzalo Gabriel Méndez, Uta Hinrichs, Miguel A. Nacenta (SACHI, University of St Andrews)
+- **Presenter**: 2025-21624 Seungwoo-Choi
+
+1. What does this research do?
+    - 이제 세상에는 다양한 시각화 도구들이 나와있는데, 덕분에 Non-expert들도 시각화를 편하게 할 수 있는 시대가 되었음
+    - non-expert들이 시각화를 어떻게 하는지, 그리고 이 시각화를 할 때 사용하는 도구가 이 과정에 어떤 영향을 끼치는지 이해하고자 함
+    - Top-down approach와 Bottom-up approach로 시각화 방식을 구분해서 비교
+    - 두 approach를 대변하는 시각화 툴 두 가지 — Tableau와 iVoLVE
+2. Background
+    - Visualization Process는 아래쪽부터 위로 쌓아 올라가는 상자들로. Visualization tool types 들은 그 옆에 비치해서 서로 다른 방향으로 작동한다는 것을 화살표같은걸로 표현해주면 좋을듯.
+    - Visualization Process (Card et al.)
+        1. Data Analysis
+        2. Filtering
+        3. Mapping (between visual properties and data attributes)
+        4. Rendering
+    - Visualization Tool Types: Top-down vs Bottom-up
+        - Bottom-up: one starts at a low level of abstraction, by manipulating individual data points and attributes to incrementally generate the overall visualization / the act of constructing a visualization by assembling blocks, that have previously been assigned a data unit through a mapping.
+            - Connected to constructive visualization (구성주의 시각화) came from educational theories: Papert’s constructionism, Piaget’s constructivism
+        - Top-down: decisions about the visual representation of data happen at an attribute level / customization can be applied only after the initial attribute-level mappings are created
+    - Two Tools
+        - Tableau Desktop 시연영상 / iVoLVER 시연영상
+            - https://youtu.be/jtFEpMOdq-Y?si=QC3ZF8UK7BdQrg9u
+            - https://youtu.be/jtFEpMOdq-Y?si=QC3ZF8UK7BdQrg9u
+        - Tableau 는 데이터의 attribute만 지정하면 곧바로 시각화가 됨
+            - 다양한 옵션들을 이 안에서 조정하는 느낌
+        - iVoLVER는 시각화 요소와 데이터를 연결해나가면서 전체적인 구성을 만들어나가는 느낌
+3. Methodology
+    - Pilot Study → In-Depth Comparison의 순서로 진행
+        - Pilot study는 시각화 수업을 듣는 학생들 대상으로 2회차 시각화 수업 진행 → 각 툴을 사용한 시각화 진행 → 화면 녹화, 설문, 그룹 토의
+        - In-Depth Comparison은 대학생,대학원생,교수 대상 → 시각화 툴 사용법을 알려주고, Pilot Study때와 동일한 태스크를 진행하게 함  → 화면녹화, 참여자들의 written notes, 인터뷰
+    - 비슷한 수준을 가진 두 가지 데이터를 활용해 각각 세 가지 태스크 진행
+        - Tasks
+            - oil
+                - v1: oil production levels by country
+                - v2: countries and their regions (country × region)
+                - v3: oil production, consumption and population by country
+            - movie
+                - v1: budget of each movie
+                - v2: movie and genre (movie × genre)
+                - v3: budget, world-wide gross revenue and duration
+            - To balance tasks, datasets and tools, participants in both groups saw the same datasets and tasks in the first session, and different (but equivalent in size and difficulty) datasets and tasks in the second
+4. Pilot Study
+    - 참여자 정보
+    - recording analysis
+        - Tableau Desktop explored more alternative designs
+            - most exclusively through the “Show-me” pane in something that appeared to be a trial-and-error approach
+        - iVolver
+            - were more diverse than those created in Tableau and included non-standard visualizations
+    - Participants’ motivations behind their design decisions can be inferred through their questionnaire responses
+        - Tableau
+            - “I just dragged and dropped the attributes and Tableau did the rest and I just kept moving them around until I found one I liked.” [s7],
+            - “by exploring available chart types and then selecting them depending on the available properties/measures.” [s8, commenting about her vis approach in Tableau].
+    - Group discussion
+        - identified trade-offs
+            - level of automation vs flexibility
+    - Research Questions derived from Pilot Study
+        - What characterizes and drives the overall visualization design process using the two tools?
+        - Top-down and bottom-up construction approaches influence the visualization design decisions and the exploration of alternative designs and if so, how?
+        - How do non-experts experience these two approaches in comparison?
+5. In-Depth Comparison 
+    - 참여자 정보
+    - 시각화 결과 화면
+        - 전체 시각화 모음
+        - 사용자별로 개별 태스크 (V1~V3)를 각 툴로 수행했을 때 어떻게 했는지 클릭하면 나오게
+    - Visualization Construction Process
+        - 장표 삽입 (./assets/vis_process.png)
+        - iVoLVER는 뭘 그릴지 미리 계획하고 접근하는 반면, Tableau default design을 미리 만들어 놓고 그 안에서 Customization하는 경향
+        - Interviews (iVoLVER)
+            - “For the first design <u>I just thought about all the general bar graphs</u> that we see all the time in, you know, publications and stuff like that.” [p3]
+            - “Many things need to be manually done. For example, <u>even for these five marks I need to drag fifteen times.</u> [...] But if, after I drag fifteen times, I realize ‘no, a bar chart is not good’ and I need to change. Then, probably <u>it would be quite difficult to change</u> at that time.” [p8]
+    - Tool's Influence on the Design Approach
+        - iVoLVER는 사용자에게 어떤 디자인을 할지 먼저 상상하게 하는 반면, Tableau는 Tool이 Design을 먼저 제안하면, 그걸 사용자가 받아들이는 방식
+        - participants typically reported to have a design idea in mind and only then to start the practical process of mapping data to visuals.
+            - “In iVoLVER there is sort of an extra step where you actually have to come up with the plot itself and the strategy to build it. [...] When you say ‘I wanna do bar charts’ in iVoLVER, you have to think of stuff like ‘OK, so. How am I going to order the bars?’, ‘How am I gonna connect?’ It’s up to you, all kind of different things: ‘Am I gonna scale the data?’” [p2];
+            - “[In iVoLVER] you have to think about the properties in one sense but also the marks. And it’s slightly more creative because you are making that selection, before you’re seeing a bar chart or a graph or something that’s quite default and typical.” [p9].
+        - the exploration of designs in Tableau Desktop was tool-driven, as shown by the video analysis and interviews
+            - I mean, I don’t really have to think about it [the design] in any way. I just put the title in one column and the value in the rows and, you know, that automatically created the bar chart, which is perfectly adequate. [...] I didn’t necessarily have a bar chart in mind. I just wanted to put it there and decide later on how it’s best represented depending on what the program does. [...] And then see where to go from there.” [p1].
+            - ‘Oh, I’ll put this in the columns’, ‘I’ll put this in the rows’, ‘I’ll change this mapping from this thing’, but without really thinking about it.” [p5];
+            - It feels like a very quick and easy way of presenting some simple data if you don’t have time to think about how you want to do it in a different way.” [p9].
+            - “I really, really, liked the way that I can very quickly get something going [in Tableau]. I felt that [...] I didn’t have to think as much about how to implement it, as I did in iVoLVER.” [p5].
+        - 3명 중 5명이 Tableau에서의 시각화 경험이 이후 iVoLVER에서 디자인을 할 때에 영향을 줬음을 언급.
+            “Because I did the previous experiment using Tableau. The datasets are quite similar, so I already had in my mind, it should be something like a bar chart, because I did the previous experiment.” [p8].
+    - Manipulating Data and Associated Visual Elements
+        - iVoLVER의 Bottom-up 방식은 모든 데이터 값을 개별 조작해야 해서 번거롭지만(laborious), 세부적인 직접 매핑의 자유도와 유연성(flexibility & freedom), 높은 투명성(transparency)을 제공함.
+        - 반면 Tableau의 Top-down 방식은 속도가 빠르고 상호작용 수가 적지만, 시스템이 내부에서 자동으로 매핑하므로 왜/어떻게 매핑되었는지 파악하기 어려운 '블랙박스' 문제와 추상성(abstraction)이 존재함.
+        - 노동 집약성(Laborious) vs. 유연성과 창의적 자유(Flexibility & Freedom)
+            - iVoLVER는 원소 하나하나를 반복 조작해야 하는 번거로움 존재:
+                - “For every circle I had to do the same, the same, the same thing. So, if there was a way I just do it for one circle, and it automatically does it for all the circles around—it would be perfect.” [p7]
+            - 하지만 원자적(atomic) 데이터 조작이 표준 틀을 벗어난 유연하고 창의적인 시각화 및 그룹핑을 가능하게 함:
+                - “Because of the way iVoLVER presents all the values you can change all of the direct mappings. I can kind of be a bit more creative with them. [...] in the case of the third activity it was very, very easy to see that I could map one value to the height and one value to the width.” [p3]
+                - “[iVoLVER] was actually much more free and helped me come up with new ideas. In Tableau I had no idea what to do with that type of [categorical] data and there wasn’t a huge amount of freedom to play. Whereas here [in iVoLVER], moving the actual atomic data points and figuring out ‘OK, this isn’t linear [...] How do I move them and group them?’” [p10]
+        - 과정의 투명성(Transparency) vs. 불투명한 자동화와 추상성(Black-box & Abstraction)
+            - iVoLVER는 저수준에서 시각화를 직접 빌드업하므로 데이터와 시각 요소가 어떻게 연결되는지 원인과 결과를 명확히 파악할 수 있음:
+                - “iVoLVER is better for design because you actually get to see what works, what doesn’t work and why. Whereas in Tableau I don’t think you get to see what works and doesn’t work and why [...] because it’s generated so quickly that you don’t get the sense of something building up. Whereas in iVoLVER you’ve built something up from a quite low level. Whereas in Tableau you just come in and something is created. You don’t see how it is created or why.” [p10]
+            - Tableau는 속성 단위의 고수준 조작이라, 사소한 클릭이나 Show Me 변경 시 시각화 전체가 예상치 못하게 바뀌어 추상적이고 당혹스러움을 줌:
+                - “At one point I clicked on it, and it changed everything. I was like ‘This is a disaster!’ [...] I was just not quite sure what it was going to do once I put genre in columns. It was just very abstract.” [p4]
+        - iVoLVER의 시각적 복잡도(Visual Clutter) 한계
+            - 연결선(links)이 투명성을 제공하지만, 데이터가 복잡해질수록 화면이 어지러워져 관리가 어려워짐 (4명 언급):
+                - “You get to a certain level of complexity, it becomes very hard to manage all connections.” [p5]
+                - “You have the connections, which, again, are quite confusing sometimes. Again, you have to keep good track of what you have done so far.” [p1]
+    - Control and Authorship
+        - 사용자가 사용하는 언어(인칭대명사)와 태도에서 도구 주도(Tool-driven)인지 사용자 주도(User-driven)인지 극명히 갈림.
+        - iVoLVER 사용 시 참여자 전원(10/10)이 1인칭 주어(“I did”, “I mapped”)를 사용하며 결과물에 대한 온전한 저작권/주체성(Authorship)을 가짐.
+        - 반면 Tableau 사용 시 대다수(8/10)가 설계 결정의 책임을 도구에 돌리거나(“Tableau did a good job”), 자신의 행동과 시스템의 자동 생성을 분리하여 인식함.
+        - 저작권의 귀속 (Authorship Attribution)
+            - iVoLVER: 참여자가 스스로 설계를 주도했다고 자부함:
+                - “And the third [vis] I’m satisfied with because I showed different data in, like, a readable way.” [p4]
+            - Tableau: 도구가 스스로 정렬하고 생성해 준 것으로 인식:
+                - “Tableau did a very good job of ordering them. For example, now we know what Canada produces.” [p6]
+            - Tableau에서 사용자의 작업과 시스템의 자동 생성을 명확히 분리:
+                - “I dragged the title and I dragged the gross here. Then it automatically generated this [vis], which I think is good enough. I can understand this already and, again, I wanted to add the labels to make it easier to read. [...] So, I tried to drag the label.” [p8]
+        - 참여도와 통제감 (Sense of Involvement & Control)
+            - Tableau는 데이터를 시스템에 던져 넣는 방식인 반면, iVoLVER는 데이터를 이해하고 직접 교감하는 능동적 설계 과정:
+                - “[In] Tableau you just throw it at the system; throw everything and then it generates for you.” [p8]
+                - “I’d say that the process [in iVoLVER] is definitely more involved in that you have to actually interact with that data instead of just throwing the idea of a column into a thing and having it built for you. [...] Because designing is something that you need to be involved in, and you need to understand what’s happening with the data for you to show what’s happening with the data.” [p4]
+    - Overall Preference
+        - 전반적인 선호도는 제작 속도 덕분에 Tableau가 우세(7/10)했으나, 참여자들은 두 도구의 용도가 상황(Context)에 따라 명확히 갈린다고 판단함.
+        - 전반적 선호도 분포와 트레이드오프 인식
+            - 7/10명이 속도 때문에 Tableau를 선호했으나, 그중 2명은 ‘속도 vs 탐색 가능성/과정의 이해’ 사이의 트레이드오프를 명확히 짚음:
+                - “I did everything quicker in Tableau, even though there was less space for exploration.” [p3]
+                - “Because I am writing papers, I just want to see the result; I don’t need the process. So, Tableau would be better. But if sometimes I need the process I might choose iVoLVER.” [p8]
+            - 1명은 유연성 때문에 iVoLVER를 선호하지만, 빠른 시각화 작업에는 Tableau를 기본값으로 택할 것이라 응답:
+                - “I’m a very visual user. So, although I got a bit stuck with iVoLVER, I would probably persevere with it just because it let me drag and play around and I could quickly see changing shapes and objects and things like that. But I could see me defaulting to Tableau if I have to quickly create a graph.” [p9]
+        - 맥락에 따른 도구 적합성 (Context-Dependent Suitability)
+            - 대용량 데이터(Large Datasets) → Tableau가 사실상 유일한 대안:
+                - “I’d probably prefer Tableau because I generally use large datasets, and in a large dataset iVoLVER is just not gonna handle it. And so, Tableau would be the only viable option.” [p10]
+            - 프로토타이핑, 낯선 데이터셋 탐색, 비표준 맞춤형 시각화 → iVoLVER의 독보적 강점:
+                - “iVoLVER could be a really powerful tool to prototype visualizations because of its generality and because it’s really convenient and really transparent.” [p2]
+                - “I would say [iVoLVER] is much more useful probably with more unique types of visualizations. Something that isn’t just a standard chart; something where you want to have that fine grained control; and something where you aren’t super familiar with the dataset and you want to figure it out as you go.” [p4]
+        - 두 도구를 결합한 하이브리드 워크플로우 (Hybrid Approach)
+            - 2명의 참여자는 iVoLVER로 다양한 설계 가능성을 탐색/초안(Draft)을 잡은 뒤, 결정된 디자인을 Tableau로 빠르고 깔끔하게 완성하는 연계 방식 제안:
+                - “If I don’t know what I want yet, I would prefer to try iVoLVER first to see in how many ways I can design the visualization. And then, if I know what I actually want already, I would just put it on Tableau because it’s faster.” [p7]
+                - “I would use iVoLVER for quick drafts of data visualizations. And then if I had to do maybe a more professional one, then maybe move to Tableau.” [p3]
+        - 시각화 교육 및 학습 (Teaching and Learning InfoVis)
+            - Tableau: 기존에 존재하는 표준 시각화 분류 체계(Taxonomy)를 빠르게 실험하며 학습하기에 유리:
+                - “If you’re sort of learning a taxonomy of different types of visualizations, Tableau is probably better because they already exist, and you can experiment very quickly by just moving a few things around.” [p5]
+            - iVoLVER: 데이터와 시각 변수(위치, 면적 등)의 직접 매핑 원리와 직관을 체득하기 위한 초심자 교육에 이상적 (과정의 투명성과 Hands-on 경험):
+                - “If I was trying to show people the ideas and the intuition and the motivation behind visualizing things, definitely iVoLVER. Once again, the triviality and the transparency [of the process] are the two winning factors.” [p2]
+                - “Because it’s more intuitive. At least I believe that in order to learn something, you have to get your hands dirty; you actually have to go and see. The level of automation of Tableau is very high. [...] For iVoLVER you can influence directly what will happen. [...] I believe that for a beginner iVoLVER is better than Tableau.” [p7]
+                - “Tableau does it for you, which isn’t helpful at any kind of education system. Because you don’t have to figure out what specifically is happening and how position works and how area works. It’s just sort of you drag it into size and—whoop!—it does it. Whereas in iVoLVER you need to actually pay attention.” [p4]
+5. Contribution
+    - **1) 비전문가의 시각화 구성 프로세스 특성 규명 (Characterization of Non-Expert Vis Processes)**
+        - 상향식(iVoLVER)과 하향식(Tableau)의 구성 단계별 차이, 선행 계획 유무, 반복 탐색 패턴을 비전문가 관점에서 실증적으로 비교·규명함.
+    - **2) 도구 패러다임이 설계 의사결정에 미치는 영향 규명 (Paradigm Influence on Design Decisions)**
+        - 인터페이스 철학(선반 설정 vs 직접 결합)이 기본 차트 수용, 비표준 시각화 시도, 세부 매핑 전략, 그리고 주체성/저작권 인식(Authorship)에 미치는 영향을 분석함.
+    - **3) 복합적 트레이드오프의 체계적 성찰 (Reflection on Complex Trade-offs)**
+        - 효율성(속도, 다중 대안 탐색) vs 이해도·자유도·창의성(과정의 투명성, 데이터 교감) 사이의 본질적 트레이드오프를 이론적으로 정립함 (Magic vs Literalism).
+    - **4) 차세대 도구 설계 및 시각화 교육 가이드라인 제공 (Design & Educational Guidance)**
+        - 빠른 제작 지원과 원리 학습(InfoVis Literacy)을 조화롭게 아우르는 절충형 하이브리드(The Space In-Between) 도구의 설계 방향성을 제시함.
+
+6. Limitations & Future works
+    - **[논문 저자들이 언급한 한계점 (Authors' Stated Limitations)]**
+        - **특정 두 도구의 고유 특성 국한 (Specific Tool Idiosyncrasies)**: 상향식/하향식 스펙트럼의 양 극단을 대표하지만, Tableau와 iVoLVER라는 두 소프트웨어 고유의 UI/워크플로우 특이성이 결과에 영향을 미쳤을 수 있음. 더 다양한 도구군(Lyra, DataMeadow 등)과의 비교 확장이 필요함.
+        - **통제된 실험 환경 및 부과된 태스크의 한계 (Imposed Tasks & Controlled Setting)**: 실험실 환경에서 정해진 데이터셋과 과제를 부과했기 때문에, 실제 현업에서 발생하는 유기적이고 장기적인 데이터 탐색 방식을 완전히 포착하지 못함.
+        - **참여자 집단의 이공계 편향 (Science Cohort Bias)**: 참가자 10명 전원이 CS/수학 등 STEM 전공자로, 정량 데이터에 친숙하여 비전문가 전체를 대변하기에 한계가 있음. 인문·예술 전공자 및 다양한 연령층(청소년, 노년층)으로의 확장 연구 필요.
+        - **하이브리드 도구의 실증 미비 (Unexplored Space In-Between)**: 두 접근법의 장점을 융합한 하이브리드 모드의 필요성을 제안했으나, 실제 하이브리드 프로토타입의 구현 및 비교 평가는 미래 과제로 남김.
+    - **[독자 / 발표자 관점의 비판적 한계점 및 고찰 (Presenter's Critical Reflections)]**
+        - **결과물 품질에 대한 객관적 평가 부재 (Lack of Output Quality Evaluation)**: 연구가 '제작 과정(Process)'과 '사용자 경험(Experience)'에만 집중하여, 어떤 툴이 객관적으로 더 정확하고 읽기 쉬우며 통찰을 효과적으로 전달하는 시각화를 산출했는지에 대한 결과물 자체의 시각적·분석적 품질 평가가 결여됨.
+        - **상향식 자유도를 극한으로 시험할 복잡한 과제 부족 (Under-exploited Expressivity)**: 부과된 3가지 과제가 표준 차트로도 쉽게 해결 가능한 형태여서, iVoLVER와 같은 상향식 구성 도구가 지닌 비표준·자유형태 시각화의 잠재력을 충분히 극대화(exploit)하지 못함.
+        - **진정한 의미의 '시각화 비문해자' 검증 한계 (Data Literacy Floor)**: 참가자 전원이 이공계 배경이라 기본 시각화 분류 체계나 변수 개념을 이미 이해하고 있었음. 데이터 리터러시가 전무한 순수 일반인을 대상으로 했을 때 발생할 초기 인지적 장벽과 좌절 지점(Friction)에 대한 추가 검증이 필요함.
+7. 확장: 생각을 대신해주는 도구 vs 생각을 촉진하는 도구
+    - 이 논문은 결국 '생각을 대신해주는 도구'와 '생각을 촉진하는 도구'를 비교한 것으로도 볼 수 있음.
+    - 최근 LLM은 인간의 사고를 대신해주는 경우가 많은데, 논문을 읽을 때에도 이러한 지식 소외감(Authorship 부재)을 느낌. 그래서 이 논문의 상향식 패러다임에서 영감을 받아 논문을 상향식으로 이해하는 데 도움을 줄 수 있는 툴(Paper-Insight)을 만듦.
+    - **라이브 데모**: https://paper-insight.coverletteride.workers.dev/ 
