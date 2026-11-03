@@ -45,3 +45,12 @@ code{font-family:'Pretendard',sans-serif}.file-tree{font-size:14px}
 .screenshot-points{margin:12px 0 0}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 @media(max-width:600px){.product-screenshot figcaption{flex-direction:column;gap:8px;padding:12px 14px}.lesson-body .screenshot-example h3{font-size:18px}.screenshot-example{margin:26px 0 34px}}
+
+/* PRD 도입부의 사용자 경험과 두 내부 기능을 하나의 흐름으로 보여 줍니다. */
+.prd-visual-intro{margin:24px 0 30px}
+.prd-visual-intro>p:first-child{font-size:16px}
+.prd-visual-intro>.product-screenshot img{padding:20px}
+.prd-feature-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.prd-feature-pair .product-screenshot{margin:10px 0 16px;align-self:start}
+.prd-feature-pair .product-screenshot img{width:100%;height:auto;padding:20px}
+@media(max-width:700px){.prd-feature-pair{grid-template-columns:1fr}}
